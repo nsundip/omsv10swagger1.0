@@ -1,0 +1,1622 @@
+{
+   "apiVersion":"1.0",
+   "swaggerVersion":"1.2",
+   "apis":[
+      {
+         "path":"\/access_token",
+         "description":"createAccessToken, getAccessTokenDetails"
+      },
+      {
+         "path":"\/activity",
+         "description":"getActivityList"
+      },
+      {
+         "path":"\/activity_demand",
+         "description":"getActivityDemandList, createActivityDemand, getActivityDemandDetails, modifyActivityDemand, deleteActivityDemand"
+      },
+      {
+         "path":"\/activity_group",
+         "description":"getActivityGroupList"
+      },
+      {
+         "path":"\/additional_delivery_services_for_order",
+         "description":"getAdditionalDeliveryServicesForOrder"
+      },
+      {
+         "path":"\/additional_options_for_line",
+         "description":"getAdditionalOptionsForLine"
+      },
+      {
+         "path":"\/additional_product_lines_for_delivery",
+         "description":"getAdditionalProductLinesForDelivery"
+      },
+      {
+         "path":"\/additional_services_for_line",
+         "description":"getAdditionalServicesForLine"
+      },
+      {
+         "path":"\/adhoc_putaway_tasks",
+         "description":"createAdhocPutawayTasks"
+      },
+      {
+         "path":"\/adjustment_reason",
+         "description":"getAdjustmentReasonList"
+      },
+      {
+         "path":"\/agent_criteria",
+         "description":"getAgentCriteriaList"
+      },
+      {
+         "path":"\/allocation_rule",
+         "description":"getAllocationRuleList"
+      },
+      {
+         "path":"\/api_template",
+         "description":"getApiTemplateList, manageApiTemplate, getApiTemplateDetails"
+      },
+      {
+         "path":"\/applicable_pricing_rule",
+         "description":"getApplicablePricingRuleList"
+      },
+      {
+         "path":"\/applicable_pricing_rules_for_order",
+         "description":"getApplicablePricingRulesForOrder"
+      },
+      {
+         "path":"\/application_version",
+         "description":"getApplicationVersionList, manageApplicationVersion, getApplicationVersionDetails"
+      },
+      {
+         "path":"\/approval_group",
+         "description":"getApprovalGroupList, manageApprovalGroup"
+      },
+      {
+         "path":"\/approval_plan",
+         "description":"getApprovalPlanList, manageApprovalPlan"
+      },
+      {
+         "path":"\/assigned_entitlement",
+         "description":"getAssignedEntitlementList"
+      },
+      {
+         "path":"\/assigned_pricelist_header",
+         "description":"getAssignedPricelistHeaderList"
+      },
+      {
+         "path":"\/association_relationship",
+         "description":"getAssociationRelationshipList, manageAssociationRelationship"
+      },
+      {
+         "path":"\/async_request",
+         "description":"getAsyncRequestList, createAsyncRequest"
+      },
+      {
+         "path":"\/atp_rules",
+         "description":"getATPRulesList"
+      },
+      {
+         "path":"\/attribute",
+         "description":"getAttributeList, manageAttribute, getAttributeDetails"
+      },
+      {
+         "path":"\/attribute_allowed_value",
+         "description":"getAttributeAllowedValueList"
+      },
+      {
+         "path":"\/attribute_domain",
+         "description":"manageAttributeDomain, getAttributeDomainDetails"
+      },
+      {
+         "path":"\/attribute_group",
+         "description":"getAttributeGroupList, manageAttributeGroup, getAttributeGroupDetails"
+      },
+      {
+         "path":"\/audit",
+         "description":"getAuditList"
+      },
+      {
+         "path":"\/auth_question",
+         "description":"getAuthQuestionList, manageAuthQuestion"
+      },
+      {
+         "path":"\/base_config_task",
+         "description":"getBaseConfigTaskList"
+      },
+      {
+         "path":"\/batch",
+         "description":"getBatchList, createBatch, getBatchDetails, changeBatch"
+      },
+      {
+         "path":"\/batch_for_references",
+         "description":"createBatchForReferences"
+      },
+      {
+         "path":"\/calendar",
+         "description":"getCalendarList, createCalendar, getCalendarDetails, changeCalendar, deleteCalendar"
+      },
+      {
+         "path":"\/calendar_day",
+         "description":"getCalendarDayDetails"
+      },
+      {
+         "path":"\/call_out",
+         "description":"getCallOutList, manageCallOut"
+      },
+      {
+         "path":"\/call_out_class_loader",
+         "description":"manageCallOutClassLoader"
+      },
+      {
+         "path":"\/call_out_impl",
+         "description":"manageCallOutImpl"
+      },
+      {
+         "path":"\/capacity_reservation",
+         "description":"manageCapacityReservation"
+      },
+      {
+         "path":"\/carrier_service",
+         "description":"getCarrierServiceList"
+      },
+      {
+         "path":"\/carrier_service_options_for_ordering",
+         "description":"getCarrierServiceOptionsForOrdering"
+      },
+      {
+         "path":"\/category",
+         "description":"getCategoryList, manageCategory, getCategoryDetails"
+      },
+      {
+         "path":"\/category_domain",
+         "description":"getCategoryDomainList, createCategoryDomain"
+      },
+      {
+         "path":"\/category_domain_detail",
+         "description":"getCategoryDomainDetail"
+      },
+      {
+         "path":"\/chained_order",
+         "description":"createChainedOrder"
+      },
+      {
+         "path":"\/change_project",
+         "description":"getChangeProjectList, manageChangeProject"
+      },
+      {
+         "path":"\/change_request",
+         "description":"getChangeRequestList"
+      },
+      {
+         "path":"\/change_request_user",
+         "description":"getChangeRequestUserList, manageChangeRequestUser"
+      },
+      {
+         "path":"\/charge_category",
+         "description":"getChargeCategoryList, manageChargeCategory"
+      },
+      {
+         "path":"\/charge_name",
+         "description":"getChargeNameList, manageChargeName"
+      },
+      {
+         "path":"\/charge_transaction",
+         "description":"getChargeTransactionList"
+      },
+      {
+         "path":"\/charge_transaction_request",
+         "description":"getChargeTransactionRequestList, manageChargeTransactionRequest"
+      },
+      {
+         "path":"\/classification_purpose",
+         "description":"getClassificationPurposeList, manageClassificationPurpose"
+      },
+      {
+         "path":"\/colony",
+         "description":"getColonyList, manageColony, getColonyDetails"
+      },
+      {
+         "path":"\/colony_pool",
+         "description":"getColonyPoolList, getColonyPoolDetails"
+      },
+      {
+         "path":"\/common_code",
+         "description":"getCommonCodeList, manageCommonCode"
+      },
+      {
+         "path":"\/competitor",
+         "description":"getCompetitorList, manageCompetitor, getCompetitorDetails"
+      },
+      {
+         "path":"\/complete_customer",
+         "description":"getCompleteCustomerList, getCompleteCustomerDetails"
+      },
+      {
+         "path":"\/complete_item",
+         "description":"getCompleteItemList"
+      },
+      {
+         "path":"\/complete_order",
+         "description":"getCompleteOrderDetails"
+      },
+      {
+         "path":"\/complete_order_invoice",
+         "description":"getCompleteOrderInvoiceDetails"
+      },
+      {
+         "path":"\/complete_order_line",
+         "description":"getCompleteOrderLineList, getCompleteOrderLineDetails"
+      },
+      {
+         "path":"\/complete_shipment",
+         "description":"getCompleteShipmentDetails"
+      },
+      {
+         "path":"\/component_status",
+         "description":"getComponentStatusList, manageComponentStatus, getComponentStatus"
+      },
+      {
+         "path":"\/condition",
+         "description":"getConditionList, manageCondition"
+      },
+      {
+         "path":"\/config_version_label",
+         "description":"getConfigVersionLabelList, manageConfigVersionLabel"
+      },
+      {
+         "path":"\/configuration",
+         "description":"getConfigurationList, manageConfiguration"
+      },
+      {
+         "path":"\/container_inner_pack",
+         "description":"getContainerInnerPackList"
+      },
+      {
+         "path":"\/cost_factor_group",
+         "description":"getCostFactorGroupList, createCostFactorGroup, modifyCostFactorGroup, deleteCostFactorGroup"
+      },
+      {
+         "path":"\/count",
+         "description":"getCountList"
+      },
+      {
+         "path":"\/count_program",
+         "description":"getCountProgramList, manageCountProgram"
+      },
+      {
+         "path":"\/count_request",
+         "description":"getCountRequestList, createCountRequest, getCountRequestDetails"
+      },
+      {
+         "path":"\/count_request_status",
+         "description":"changeCountRequestStatus"
+      },
+      {
+         "path":"\/count_result",
+         "description":"getCountResultList, getCountResultDetails"
+      },
+      {
+         "path":"\/coupon_character_set",
+         "description":"manageCouponCharacterSet"
+      },
+      {
+         "path":"\/coupon_code_export_audit",
+         "description":"getCouponCodeExportAuditList"
+      },
+      {
+         "path":"\/coupon_policy",
+         "description":"manageCouponPolicy"
+      },
+      {
+         "path":"\/currency",
+         "description":"getCurrencyList"
+      },
+      {
+         "path":"\/customer",
+         "description":"getCustomerList, manageCustomer, getCustomerDetails"
+      },
+      {
+         "path":"\/customer_accessibility",
+         "description":"getCustomerAccessibility"
+      },
+      {
+         "path":"\/customer_assignment",
+         "description":"getCustomerAssignmentList, manageCustomerAssignment"
+      },
+      {
+         "path":"\/customer_contact",
+         "description":"getCustomerContactList"
+      },
+      {
+         "path":"\/customer_grade",
+         "description":"getCustomerGradeList, manageCustomerGrade"
+      },
+      {
+         "path":"\/customer_payment_method",
+         "description":"getCustomerPaymentMethodList"
+      },
+      {
+         "path":"\/customer_subscription",
+         "description":"getCustomerSubscriptionList, getCustomerSubscriptionDetails"
+      },
+      {
+         "path":"\/dash_board_content_for_store",
+         "description":"getDashBoardContentForStore"
+      },
+      {
+         "path":"\/data_security_group",
+         "description":"getDataSecurityGroupList, manageDataSecurityGroup"
+      },
+      {
+         "path":"\/date_type",
+         "description":"getDateTypeList"
+      },
+      {
+         "path":"\/db_pool",
+         "description":"getDBPoolList, manageDBPool"
+      },
+      {
+         "path":"\/db_verify_script",
+         "description":"getDbVerifyScriptDetails"
+      },
+      {
+         "path":"\/delivery_plan",
+         "description":"getDeliveryPlanList, manageDeliveryPlan, getDeliveryPlanDetails"
+      },
+      {
+         "path":"\/demand_details",
+         "description":"getDemandDetailsList"
+      },
+      {
+         "path":"\/demand_summary",
+         "description":"getDemandSummary"
+      },
+      {
+         "path":"\/department",
+         "description":"getDepartmentList"
+      },
+      {
+         "path":"\/derived_order",
+         "description":"createDerivedOrder"
+      },
+      {
+         "path":"\/device",
+         "description":"getDeviceList, manageDevice"
+      },
+      {
+         "path":"\/discr_based_adjustment_invoice",
+         "description":"createDiscrBasedAdjustmentInvoice"
+      },
+      {
+         "path":"\/distribution",
+         "description":"getDistributionList, createDistribution, getDistribution, modifyDistribution, deleteDistribution"
+      },
+      {
+         "path":"\/distribution_rule",
+         "description":"getDistributionRuleList, manageDistributionRule"
+      },
+      {
+         "path":"\/distribution_setup",
+         "description":"getDistributionSetup"
+      },
+      {
+         "path":"\/doc_type_determination",
+         "description":"getDocTypeDeterminationList, getDocTypeDeterminationDetails"
+      },
+      {
+         "path":"\/dock_appointment",
+         "description":"getDockAppointmentList, manageDockAppointment, getDockAppointmentDetails"
+      },
+      {
+         "path":"\/document_type",
+         "description":"getDocumentTypeList"
+      },
+      {
+         "path":"\/drop_status",
+         "description":"getDropStatus"
+      },
+      {
+         "path":"\/entitlement_assignment",
+         "description":"getEntitlementAssignmentList"
+      },
+      {
+         "path":"\/entitlement_rule",
+         "description":"getEntitlementRuleList, manageEntitlementRule, getEntitlementRuleDetails"
+      },
+      {
+         "path":"\/entitlement_rule_assignment",
+         "description":"manageEntitlementRuleAssignment"
+      },
+      {
+         "path":"\/entitlement_rule_detail_item",
+         "description":"getEntitlementRuleDetailItemList"
+      },
+      {
+         "path":"\/entity_attribute",
+         "description":"getEntityAttributeList"
+      },
+      {
+         "path":"\/entity_attribute_domain",
+         "description":"manageEntityAttributeDomain, getEntityAttributeDomainDetails"
+      },
+      {
+         "path":"\/entity_custom_attribute",
+         "description":"getEntityCustomAttributeList, manageEntityCustomAttribute"
+      },
+      {
+         "path":"\/environment",
+         "description":"createEnvironment"
+      },
+      {
+         "path":"\/equipment",
+         "description":"getEquipmentList"
+      },
+      {
+         "path":"\/equipment_type",
+         "description":"getEquipmentTypeList"
+      },
+      {
+         "path":"\/event_auditor",
+         "description":"getEventAuditorList, manageEventAuditor"
+      },
+      {
+         "path":"\/exception",
+         "description":"getExceptionList, createException, getExceptionDetails, changeException"
+      },
+      {
+         "path":"\/exception_list_for_order",
+         "description":"getExceptionListForOrder"
+      },
+      {
+         "path":"\/exception_routing_rule",
+         "description":"getExceptionRoutingRuleList, manageExceptionRoutingRule"
+      },
+      {
+         "path":"\/exception_type",
+         "description":"getExceptionTypeList, manageExceptionType"
+      },
+      {
+         "path":"\/exception_type_role",
+         "description":"getExceptionTypeRoleList"
+      },
+      {
+         "path":"\/execution_exception",
+         "description":"getExecutionExceptionList"
+      },
+      {
+         "path":"\/execution_exception_audit",
+         "description":"getExecutionExceptionAuditList"
+      },
+      {
+         "path":"\/export_data_ex",
+         "description":"createExportDataEx"
+      },
+      {
+         "path":"\/flow",
+         "description":"getFlowList"
+      },
+      {
+         "path":"\/freight_charge",
+         "description":"getFreightCharge"
+      },
+      {
+         "path":"\/freight_terms",
+         "description":"getFreightTermsList, manageFreightTerms"
+      },
+      {
+         "path":"\/fulfillment_options",
+         "description":"modifyFulfillmentOptions"
+      },
+      {
+         "path":"\/fulfillment_summary",
+         "description":"getFulfillmentSummaryDetails"
+      },
+      {
+         "path":"\/hazmat_compliance",
+         "description":"getHazmatComplianceList, manageHazmatCompliance"
+      },
+      {
+         "path":"\/hold_type",
+         "description":"getHoldTypeList, manageHoldType"
+      },
+      {
+         "path":"\/import_data_ex",
+         "description":"createImportDataEx"
+      },
+      {
+         "path":"\/index_status",
+         "description":"getIndexStatus"
+      },
+      {
+         "path":"\/initiator_response",
+         "description":"createInitiatorResponse"
+      },
+      {
+         "path":"\/integration_error",
+         "description":"getIntegrationErrorList, getIntegrationErrorDetails"
+      },
+      {
+         "path":"\/integration_error_group",
+         "description":"getIntegrationErrorGroupList"
+      },
+      {
+         "path":"\/integration_error_xml",
+         "description":"getIntegrationErrorXML"
+      },
+      {
+         "path":"\/integration_input_xml",
+         "description":"getIntegrationInputXML"
+      },
+      {
+         "path":"\/inventory_activity",
+         "description":"createInventoryActivity"
+      },
+      {
+         "path":"\/inventory_activity_list",
+         "description":"createInventoryActivityList"
+      },
+      {
+         "path":"\/inventory_alerts",
+         "description":"getInventoryAlertsList, manageInventoryAlerts"
+      },
+      {
+         "path":"\/inventory_audit",
+         "description":"getInventoryAudit"
+      },
+      {
+         "path":"\/inventory_audit_summary",
+         "description":"getInventoryAuditSummary"
+      },
+      {
+         "path":"\/inventory_considerations",
+         "description":"getInventoryConsiderationsList"
+      },
+      {
+         "path":"\/inventory_cost",
+         "description":"getInventoryCost"
+      },
+      {
+         "path":"\/inventory_demand_type",
+         "description":"getInventoryDemandTypeList"
+      },
+      {
+         "path":"\/inventory_item",
+         "description":"getInventoryItemList"
+      },
+      {
+         "path":"\/inventory_monitor_rule",
+         "description":"manageInventoryMonitorRule"
+      },
+      {
+         "path":"\/inventory_monitor_rules",
+         "description":"getInventoryMonitorRulesList"
+      },
+      {
+         "path":"\/inventory_node_control",
+         "description":"getInventoryNodeControlList, manageInventoryNodeControl"
+      },
+      {
+         "path":"\/inventory_ownership_transfer_record",
+         "description":"getInventoryOwnershipTransferRecordList"
+      },
+      {
+         "path":"\/inventory_reservation",
+         "description":"getInventoryReservationList"
+      },
+      {
+         "path":"\/inventory_status",
+         "description":"getInventoryStatusList"
+      },
+      {
+         "path":"\/inventory_supply",
+         "description":"getInventorySupply"
+      },
+      {
+         "path":"\/inventory_supply_type",
+         "description":"getInventorySupplyTypeList"
+      },
+      {
+         "path":"\/item",
+         "description":"getItemList, manageItem, getItemDetails"
+      },
+      {
+         "path":"\/item_associations",
+         "description":"getItemAssociations, modifyItemAssociations"
+      },
+      {
+         "path":"\/item_attribute_group_type",
+         "description":"getItemAttributeGroupTypeList, manageItemAttributeGroupType"
+      },
+      {
+         "path":"\/item_attribute_groups_for_category",
+         "description":"manageItemAttributeGroupsForCategory, getItemAttributeGroupsForCategory"
+      },
+      {
+         "path":"\/item_based_allocation_trigger",
+         "description":"manageItemBasedAllocationTrigger"
+      },
+      {
+         "path":"\/item_instruction_code",
+         "description":"getItemInstructionCodeList"
+      },
+      {
+         "path":"\/item_list_for_ordering",
+         "description":"getItemListForOrdering"
+      },
+      {
+         "path":"\/item_node_defn",
+         "description":"getItemNodeDefnList, createItemNodeDefn, getItemNodeDefnDetails, modifyItemNodeDefn, deleteItemNodeDefn"
+      },
+      {
+         "path":"\/item_node_velocity",
+         "description":"getItemNodeVelocityList, manageItemNodeVelocity"
+      },
+      {
+         "path":"\/item_price_set",
+         "description":"manageItemPriceSet"
+      },
+      {
+         "path":"\/item_price_type",
+         "description":"getItemPriceTypeList"
+      },
+      {
+         "path":"\/item_status_rules",
+         "description":"getItemStatusRulesList, manageItemStatusRules"
+      },
+      {
+         "path":"\/item_uom",
+         "description":"getItemUOMList"
+      },
+      {
+         "path":"\/item_uom_master",
+         "description":"getItemUOMMasterList"
+      },
+      {
+         "path":"\/label_preference",
+         "description":"getLabelPreferenceList, manageLabelPreference"
+      },
+      {
+         "path":"\/line_constraints",
+         "description":"getLineConstraints"
+      },
+      {
+         "path":"\/line_relationship_type",
+         "description":"getLineRelationshipTypeList, manageLineRelationshipType"
+      },
+      {
+         "path":"\/lines_to_receive",
+         "description":"getLinesToReceive"
+      },
+      {
+         "path":"\/load",
+         "description":"getLoadList, manageLoad, getLoadDetails"
+      },
+      {
+         "path":"\/load_status",
+         "description":"changeLoadStatus"
+      },
+      {
+         "path":"\/load_summary",
+         "description":"getLoadSummary"
+      },
+      {
+         "path":"\/locale",
+         "description":"getLocaleList"
+      },
+      {
+         "path":"\/location",
+         "description":"getLocationList, manageLocation, getLocationDetails"
+      },
+      {
+         "path":"\/location_inventory_audit",
+         "description":"getLocationInventoryAuditList, getLocationInventoryAuditDetails"
+      },
+      {
+         "path":"\/location_size",
+         "description":"getLocationSizeList"
+      },
+      {
+         "path":"\/location_storage_code",
+         "description":"getLocationStorageCodeList"
+      },
+      {
+         "path":"\/lot",
+         "description":"getLotList"
+      },
+      {
+         "path":"\/lpn",
+         "description":"getLPNList, createLPN"
+      },
+      {
+         "path":"\/manifest",
+         "description":"getManifestList, getManifestDetails"
+      },
+      {
+         "path":"\/master_catalog",
+         "description":"getMasterCatalogList, createMasterCatalog, getMasterCatalogDetails"
+      },
+      {
+         "path":"\/menu",
+         "description":"createMenuHierarchy, modifyMenuHierarchy, deleteMenuHierarchy"
+      },
+      {
+         "path":"\/menu_hierarchy_for_user",
+         "description":"getMenuHierarchyForUser"
+      },
+      {
+         "path":"\/model_regression",
+         "description":"manageModelRegression"
+      },
+      {
+         "path":"\/monitor_consolidation",
+         "description":"getMonitorConsolidationList, manageMonitorConsolidation, getMonitorConsolidationDetails"
+      },
+      {
+         "path":"\/monitor_rule",
+         "description":"getMonitorRuleList, manageMonitorRule, getMonitorRuleDetails"
+      },
+      {
+         "path":"\/move_request",
+         "description":"getMoveRequestList, createMoveRequest, getMoveRequestDetails, modifyMoveRequest"
+      },
+      {
+         "path":"\/move_request_line",
+         "description":"getMoveRequestLineDetails"
+      },
+      {
+         "path":"\/move_request_status_audit",
+         "description":"getMoveRequestStatusAuditList, getMoveRequestStatusAuditDetails"
+      },
+      {
+         "path":"\/negotiation",
+         "description":"getNegotiationList, createNegotiation, getNegotiationDetails"
+      },
+      {
+         "path":"\/negotiation_history",
+         "description":"getNegotiationHistory"
+      },
+      {
+         "path":"\/negotiator_response",
+         "description":"createNegotiatorResponse"
+      },
+      {
+         "path":"\/next_exception",
+         "description":"getNextException"
+      },
+      {
+         "path":"\/next_task",
+         "description":"getNextTask"
+      },
+      {
+         "path":"\/node_cost",
+         "description":"getNodeCostList, manageNodeCost"
+      },
+      {
+         "path":"\/node_inventory",
+         "description":"getNodeInventory"
+      },
+      {
+         "path":"\/node_item",
+         "description":"getNodeItemDetails"
+      },
+      {
+         "path":"\/node_notification_period",
+         "description":"getNodeNotificationPeriodList, manageNodeNotificationPeriod, getNodeNotificationPeriodDetails"
+      },
+      {
+         "path":"\/node_receiving_preference",
+         "description":"getNodeReceivingPreferenceList"
+      },
+      {
+         "path":"\/node_scac_account",
+         "description":"getNodeSCACAccountList"
+      },
+      {
+         "path":"\/node_transfer_schedule",
+         "description":"getNodeTransferScheduleList, manageNodeTransferSchedule"
+      },
+      {
+         "path":"\/node_transfer_schedule_override",
+         "description":"manageNodeTransferScheduleOverride"
+      },
+      {
+         "path":"\/note",
+         "description":"getNoteList"
+      },
+      {
+         "path":"\/opportunity",
+         "description":"getOpportunityList, manageOpportunity, getOpportunityDetails"
+      },
+      {
+         "path":"\/opportunity_status",
+         "description":"changeOpportunityStatus"
+      },
+      {
+         "path":"\/order",
+         "description":"getOrderList, createOrder, getOrderDetails, changeOrder, deleteOrder"
+      },
+      {
+         "path":"\/order_approval_rule",
+         "description":"getOrderApprovalRuleList, manageOrderApprovalRule"
+      },
+      {
+         "path":"\/order_audit",
+         "description":"getOrderAuditList, getOrderAuditDetails"
+      },
+      {
+         "path":"\/order_from_master_order",
+         "description":"createOrderFromMasterOrder"
+      },
+      {
+         "path":"\/order_from_quote",
+         "description":"createOrderFromQuote"
+      },
+      {
+         "path":"\/order_fulfillment",
+         "description":"getOrderFulfillmentDetails"
+      },
+      {
+         "path":"\/order_hold_resolution",
+         "description":"getOrderHoldResolutionList"
+      },
+      {
+         "path":"\/order_hold_type",
+         "description":"getOrderHoldTypeList"
+      },
+      {
+         "path":"\/order_invoice",
+         "description":"getOrderInvoiceList, createOrderInvoice, getOrderInvoiceDetails, changeOrderInvoice"
+      },
+      {
+         "path":"\/order_invoice_detail",
+         "description":"getOrderInvoiceDetailList"
+      },
+      {
+         "path":"\/order_line",
+         "description":"getOrderLineList, getOrderLineDetails"
+      },
+      {
+         "path":"\/order_line_price_match",
+         "description":"manageOrderLinePriceMatch"
+      },
+      {
+         "path":"\/order_line_status",
+         "description":"getOrderLineStatusList"
+      },
+      {
+         "path":"\/order_line_type",
+         "description":"getOrderLineTypeList"
+      },
+      {
+         "path":"\/order_lines_for_price_match",
+         "description":"getOrderLinesForPriceMatch"
+      },
+      {
+         "path":"\/order_lines_with_transaction_quantity",
+         "description":"getOrderLinesWithTransactionQuantity"
+      },
+      {
+         "path":"\/order_planned_effort",
+         "description":"getOrderPlannedEffort"
+      },
+      {
+         "path":"\/order_release",
+         "description":"getOrderReleaseList, getOrderReleaseDetails"
+      },
+      {
+         "path":"\/orders_for_return",
+         "description":"getOrdersForReturn"
+      },
+      {
+         "path":"\/org_exception_type",
+         "description":"getOrgExceptionTypeList, manageOrgExceptionType"
+      },
+      {
+         "path":"\/org_group_override",
+         "description":"getOrgGroupOverrideList, manageOrgGroupOverride"
+      },
+      {
+         "path":"\/org_relationship",
+         "description":"manageOrgRelationship"
+      },
+      {
+         "path":"\/organization",
+         "description":"getOrganizationList, manageOrganizationHierarchy, getOrganizationHierarchy"
+      },
+      {
+         "path":"\/overridden_rule",
+         "description":"getOverriddenRuleList, manageOverriddenRule"
+      },
+      {
+         "path":"\/parcel_scac_summary",
+         "description":"getParcelSCACSummary"
+      },
+      {
+         "path":"\/participant_note",
+         "description":"getParticipantNoteList"
+      },
+      {
+         "path":"\/password",
+         "description":"changePassword"
+      },
+      {
+         "path":"\/password_policy",
+         "description":"getPasswordPolicyList, managePasswordPolicy, getPasswordPolicyDetails"
+      },
+      {
+         "path":"\/password_rule_cfg",
+         "description":"getPasswordRuleCfgList, managePasswordRuleCfg, getPasswordRuleCfgDetails"
+      },
+      {
+         "path":"\/password_rule_defn",
+         "description":"getPasswordRuleDefnList, managePasswordRuleDefn, getPasswordRuleDefnDetails"
+      },
+      {
+         "path":"\/payment",
+         "description":"getPaymentList"
+      },
+      {
+         "path":"\/payment_card_type",
+         "description":"getPaymentCardTypeList, managePaymentCardType, getPaymentCardTypeDetails"
+      },
+      {
+         "path":"\/payment_inquiry",
+         "description":"getPaymentInquiryDetails"
+      },
+      {
+         "path":"\/payment_rule",
+         "description":"getPaymentRuleList"
+      },
+      {
+         "path":"\/payment_status",
+         "description":"getPaymentStatusList"
+      },
+      {
+         "path":"\/payment_terms",
+         "description":"managePaymentTerms"
+      },
+      {
+         "path":"\/payment_type",
+         "description":"getPaymentTypeList"
+      },
+      {
+         "path":"\/pending_adjustments",
+         "description":"getPendingAdjustments"
+      },
+      {
+         "path":"\/person_info",
+         "description":"getPersonInfoList"
+      },
+      {
+         "path":"\/physical_count",
+         "description":"managePhysicalCount"
+      },
+      {
+         "path":"\/physical_count_category",
+         "description":"getPhysicalCountCategoryList"
+      },
+      {
+         "path":"\/physical_count_plan",
+         "description":"getPhysicalCountPlanList, getPhysicalCountPlanDetails"
+      },
+      {
+         "path":"\/pick_list",
+         "description":"getPickListList, getPickListDetails"
+      },
+      {
+         "path":"\/planned_demand_summary",
+         "description":"getPlannedDemandSummary"
+      },
+      {
+         "path":"\/planned_tasks",
+         "description":"managePlannedTasks, getPlannedTasks"
+      },
+      {
+         "path":"\/price_match",
+         "description":"getPriceMatchList, managePriceMatch, getPriceMatchDetails"
+      },
+      {
+         "path":"\/price_match_competitors",
+         "description":"getPriceMatchCompetitors"
+      },
+      {
+         "path":"\/price_program",
+         "description":"getPriceProgramList, createPriceProgram, getPriceProgramDetails, changePriceProgram, deletePriceProgram"
+      },
+      {
+         "path":"\/price_set",
+         "description":"getPriceSetList, createPriceSet, getPriceSetDetails, changePriceSet, deletePriceSet"
+      },
+      {
+         "path":"\/price_type",
+         "description":"getPriceTypeList, managePriceType, getPriceTypeDetails"
+      },
+      {
+         "path":"\/price_type_association",
+         "description":"managePriceTypeAssociation"
+      },
+      {
+         "path":"\/pricelist_assignment",
+         "description":"getPricelistAssignmentList, managePricelistAssignment"
+      },
+      {
+         "path":"\/pricelist_header",
+         "description":"getPricelistHeaderList, managePricelistHeader, getPricelistHeaderDetails"
+      },
+      {
+         "path":"\/pricelist_line",
+         "description":"getPricelistLineList, managePricelistLine"
+      },
+      {
+         "path":"\/pricelist_line_list_for_item",
+         "description":"getPricelistLineListForItem"
+      },
+      {
+         "path":"\/pricelist_seller_assignment",
+         "description":"getPricelistSellerAssignmentList, managePricelistSellerAssignment"
+      },
+      {
+         "path":"\/pricing_rule",
+         "description":"getPricingRuleList, managePricingRule, getPricingRuleDetails"
+      },
+      {
+         "path":"\/pricing_rule_assignment",
+         "description":"getPricingRuleAssignmentList, managePricingRuleAssignment"
+      },
+      {
+         "path":"\/pricing_rule_seller_assignment",
+         "description":"getPricingRuleSellerAssignmentList, managePricingRuleSellerAssignment"
+      },
+      {
+         "path":"\/print_document",
+         "description":"getPrintDocumentList"
+      },
+      {
+         "path":"\/process_status",
+         "description":"getProcessStatusList"
+      },
+      {
+         "path":"\/productivity",
+         "description":"getProductivityList, createProductivity, getProductivityDetails, modifyProductivity, deleteProductivity"
+      },
+      {
+         "path":"\/productivity_reference",
+         "description":"getProductivityReferenceList"
+      },
+      {
+         "path":"\/productivity_type",
+         "description":"getProductivityTypeList, modifyProductivityType"
+      },
+      {
+         "path":"\/promotions_for_ordering",
+         "description":"getPromotionsForOrdering"
+      },
+      {
+         "path":"\/property",
+         "description":"manageProperty"
+      },
+      {
+         "path":"\/property_metadata",
+         "description":"getPropertyMetadataList"
+      },
+      {
+         "path":"\/putaway_locations",
+         "description":"getPutawayLocations"
+      },
+      {
+         "path":"\/qualified_tag",
+         "description":"getQualifiedTagList, manageQualifiedTag, getQualifiedTagDetails"
+      },
+      {
+         "path":"\/qualified_tag_type",
+         "description":"getQualifiedTagTypeList, manageQualifiedTagType, getQualifiedTagTypeDetails"
+      },
+      {
+         "path":"\/qualified_tag_ver_compatblty",
+         "description":"getQualifiedTagVerCompatbltyList, manageQualifiedTagVerCompatblty, getQualifiedTagVerCompatbltyDetails"
+      },
+      {
+         "path":"\/query",
+         "description":"getQueryList, manageQuery, getQueryDetails"
+      },
+      {
+         "path":"\/query_type",
+         "description":"getQueryTypeList"
+      },
+      {
+         "path":"\/queue",
+         "description":"getQueueList, manageQueue"
+      },
+      {
+         "path":"\/receipt",
+         "description":"getReceiptList, getReceiptDetails, changeReceipt"
+      },
+      {
+         "path":"\/receipt_cost",
+         "description":"modifyReceiptCost"
+      },
+      {
+         "path":"\/receipt_line",
+         "description":"getReceiptLineList"
+      },
+      {
+         "path":"\/receipt_lines_for_transaction",
+         "description":"getReceiptLinesForTransaction"
+      },
+      {
+         "path":"\/receipt_status",
+         "description":"changeReceiptStatus"
+      },
+      {
+         "path":"\/receiving_discr_reason",
+         "description":"getReceivingDiscrReasonList"
+      },
+      {
+         "path":"\/receiving_discrepancy",
+         "description":"getReceivingDiscrepancyList"
+      },
+      {
+         "path":"\/receiving_preference",
+         "description":"getReceivingPreference"
+      },
+      {
+         "path":"\/region",
+         "description":"getRegionList, createRegion, getRegionDetails, changeRegion"
+      },
+      {
+         "path":"\/region_schema",
+         "description":"getRegionSchemaList"
+      },
+      {
+         "path":"\/region_usage",
+         "description":"getRegionUsageDetails"
+      },
+      {
+         "path":"\/release",
+         "description":"changeRelease"
+      },
+      {
+         "path":"\/reservation",
+         "description":"getReservation"
+      },
+      {
+         "path":"\/resource",
+         "description":"createResourceHierarchy, getResourceHierarchy, modifyResourceHierarchy, deleteResourceHierarchy"
+      },
+      {
+         "path":"\/resource_pool",
+         "description":"getResourcePoolList, createResourcePool, getResourcePoolDetails, changeResourcePool"
+      },
+      {
+         "path":"\/resource_pool_capacity",
+         "description":"getResourcePoolCapacity, changeResourcePoolCapacity"
+      },
+      {
+         "path":"\/resource_pool_consumption_details",
+         "description":"getResourcePoolConsumptionDetailsList"
+      },
+      {
+         "path":"\/resources_for_user",
+         "description":"getResourcesForUser"
+      },
+      {
+         "path":"\/resources_for_user_group",
+         "description":"getResourcesForUserGroup"
+      },
+      {
+         "path":"\/return_disposition",
+         "description":"getReturnDispositionList, manageReturnDisposition"
+      },
+      {
+         "path":"\/return_fulfillment_summary",
+         "description":"getReturnFulfillmentSummaryDetails"
+      },
+      {
+         "path":"\/return_method",
+         "description":"getReturnMethod"
+      },
+      {
+         "path":"\/role",
+         "description":"getRoleList"
+      },
+      {
+         "path":"\/routing_guide",
+         "description":"getRoutingGuideList, manageRoutingGuide"
+      },
+      {
+         "path":"\/routing_guide_detail",
+         "description":"getRoutingGuideDetailList"
+      },
+      {
+         "path":"\/rule",
+         "description":"getRuleList, manageRule, getRuleDetails"
+      },
+      {
+         "path":"\/sales_order",
+         "description":"getSalesOrderDetails"
+      },
+      {
+         "path":"\/sales_order_details_with_local_qty",
+         "description":"getSalesOrderDetailsWithLocalQty"
+      },
+      {
+         "path":"\/saved_search",
+         "description":"getSavedSearchList, createSavedSearch, getSavedSearchDetails, modifySavedSearch, deleteSavedSearch"
+      },
+      {
+         "path":"\/scac",
+         "description":"getScacList"
+      },
+      {
+         "path":"\/scac_and_service",
+         "description":"getScacAndServiceList"
+      },
+      {
+         "path":"\/search_index_field",
+         "description":"getSearchIndexFieldList"
+      },
+      {
+         "path":"\/search_index_trigger",
+         "description":"getSearchIndexTriggerList, manageSearchIndexTrigger"
+      },
+      {
+         "path":"\/seller_and_buyer_for_order",
+         "description":"getSellerAndBuyerForOrder"
+      },
+      {
+         "path":"\/serial",
+         "description":"getSerialList"
+      },
+      {
+         "path":"\/serial_numbers",
+         "description":"getSerialNumbers"
+      },
+      {
+         "path":"\/server",
+         "description":"getServerList, getServerDetails, modifyServer"
+      },
+      {
+         "path":"\/server_properties",
+         "description":"getServerProperties"
+      },
+      {
+         "path":"\/service",
+         "description":"getServiceList, createService, modifyService, deleteService"
+      },
+      {
+         "path":"\/service_activity",
+         "description":"getServiceActivityList"
+      },
+      {
+         "path":"\/service_grouping",
+         "description":"manageServiceGrouping"
+      },
+      {
+         "path":"\/service_resource",
+         "description":"manageServiceResource"
+      },
+      {
+         "path":"\/service_resource_assignments",
+         "description":"manageServiceResourceAssignments"
+      },
+      {
+         "path":"\/service_resource_capacity",
+         "description":"getServiceResourceCapacity"
+      },
+      {
+         "path":"\/service_skill",
+         "description":"getServiceSkillList, manageServiceSkill, getServiceSkillDetails"
+      },
+      {
+         "path":"\/service_slot_group",
+         "description":"getServiceSlotGroupList, manageServiceSlotGroup"
+      },
+      {
+         "path":"\/service_type",
+         "description":"getServiceTypeList"
+      },
+      {
+         "path":"\/ship_node",
+         "description":"getShipNodeList"
+      },
+      {
+         "path":"\/shipment",
+         "description":"getShipmentList, createShipment, getShipmentDetails, changeShipment"
+      },
+      {
+         "path":"\/shipment_container",
+         "description":"getShipmentContainerList, createShipmentContainer, getShipmentContainerDetails, changeShipmentContainer"
+      },
+      {
+         "path":"\/shipment_group",
+         "description":"getShipmentGroupList"
+      },
+      {
+         "path":"\/shipment_invoice",
+         "description":"createShipmentInvoice"
+      },
+      {
+         "path":"\/shipment_line",
+         "description":"getShipmentLineList"
+      },
+      {
+         "path":"\/shipment_list_for_order",
+         "description":"getShipmentListForOrder"
+      },
+      {
+         "path":"\/shipment_planned_effort",
+         "description":"getShipmentPlannedEffort"
+      },
+      {
+         "path":"\/shipment_profile_summary",
+         "description":"getShipmentProfileSummary"
+      },
+      {
+         "path":"\/shipment_receipt_discrepancy",
+         "description":"getShipmentReceiptDiscrepancy"
+      },
+      {
+         "path":"\/shipment_status",
+         "description":"changeShipmentStatus"
+      },
+      {
+         "path":"\/shipping_charge_policy",
+         "description":"manageShippingChargePolicy"
+      },
+      {
+         "path":"\/shipping_charge_rule",
+         "description":"manageShippingChargeRule"
+      },
+      {
+         "path":"\/sorted_shipment",
+         "description":"getSortedShipmentDetails"
+      },
+      {
+         "path":"\/sorting_tasks",
+         "description":"createSortingTasks"
+      },
+      {
+         "path":"\/sourcing_rule",
+         "description":"getSourcingRuleList, manageSourcingRule"
+      },
+      {
+         "path":"\/special_services",
+         "description":"getSpecialServicesList"
+      },
+      {
+         "path":"\/state_region",
+         "description":"getStateRegionList"
+      },
+      {
+         "path":"\/status",
+         "description":"getStatusList"
+      },
+      {
+         "path":"\/status_inventory_types",
+         "description":"getStatusInventoryTypesList, manageStatusInventoryTypes"
+      },
+      {
+         "path":"\/status_milestone",
+         "description":"getStatusMilestoneList, manageStatusMilestone, getStatusMilestoneDetails"
+      },
+      {
+         "path":"\/stop_delivery_request",
+         "description":"getStopDeliveryRequestList, manageStopDeliveryRequest, getStopDeliveryRequestDetails"
+      },
+      {
+         "path":"\/store_batch",
+         "description":"getStoreBatchList, manageStoreBatch, getStoreBatchDetails"
+      },
+      {
+         "path":"\/store_batch_location",
+         "description":"getStoreBatchLocationList, manageStoreBatchLocation"
+      },
+      {
+         "path":"\/sub_catalog_organization_assignment",
+         "description":"getSubCatalogOrganizationAssignmentList, manageSubCatalogOrganizationAssignment"
+      },
+      {
+         "path":"\/supply",
+         "description":"getSupplyDetails"
+      },
+      {
+         "path":"\/supported_table_type",
+         "description":"getSupportedTableTypeList"
+      },
+      {
+         "path":"\/surrounding_node",
+         "description":"getSurroundingNodeList"
+      },
+      {
+         "path":"\/sync_db_export",
+         "description":"getSyncDBExportList"
+      },
+      {
+         "path":"\/sync_db_import",
+         "description":"getSyncDBImportList, manageSyncDBImport"
+      },
+      {
+         "path":"\/sync_profile",
+         "description":"getSyncProfileList, manageSyncProfile"
+      },
+      {
+         "path":"\/sync_subscription",
+         "description":"getSyncSubscriptionList, manageSyncSubscription"
+      },
+      {
+         "path":"\/sync_target",
+         "description":"getSyncTargetList, manageSyncTarget"
+      },
+      {
+         "path":"\/tag_list_for_ordering",
+         "description":"getTagListForOrdering"
+      },
+      {
+         "path":"\/task",
+         "description":"getTaskList, createTask, getTaskDetails, changeTask"
+      },
+      {
+         "path":"\/task_queue",
+         "description":"manageTaskQueue"
+      },
+      {
+         "path":"\/task_queue_data",
+         "description":"getTaskQueueDataList"
+      },
+      {
+         "path":"\/task_reference",
+         "description":"getTaskReferenceList"
+      },
+      {
+         "path":"\/task_summary",
+         "description":"getTaskSummary"
+      },
+      {
+         "path":"\/task_type",
+         "description":"getTaskTypeList, getTaskTypeDetails"
+      },
+      {
+         "path":"\/team",
+         "description":"getTeamList, manageTeam, getTeamDetails"
+      },
+      {
+         "path":"\/trace",
+         "description":"getTraceList"
+      },
+      {
+         "path":"\/traceable_component",
+         "description":"getTraceableComponentList"
+      },
+      {
+         "path":"\/tracking_no_and_print_label",
+         "description":"getTrackingNoAndPrintLabel"
+      },
+      {
+         "path":"\/transaction",
+         "description":"getTransactionList"
+      },
+      {
+         "path":"\/transactional_relationship",
+         "description":"getTransactionalRelationshipList"
+      },
+      {
+         "path":"\/transactional_relationships",
+         "description":"manageTransactionalRelationships"
+      },
+      {
+         "path":"\/transformation_config",
+         "description":"getTransformationConfigList, manageTransformationConfig"
+      },
+      {
+         "path":"\/transformation_data",
+         "description":"manageTransformationData, getTransformationData"
+      },
+      {
+         "path":"\/transitions_for_disposition",
+         "description":"getTransitionsForDisposition"
+      },
+      {
+         "path":"\/uom",
+         "description":"getUomList"
+      },
+      {
+         "path":"\/upload_job",
+         "description":"getUploadJobList, manageUploadJob"
+      },
+      {
+         "path":"\/ups_check_digit",
+         "description":"getUPSCheckDigit"
+      },
+      {
+         "path":"\/ups_label_data",
+         "description":"getUPSLabelData"
+      },
+      {
+         "path":"\/user",
+         "description":"getUserList, createUserHierarchy, getUserHierarchy, modifyUserHierarchy, deleteUserHierarchy"
+      },
+      {
+         "path":"\/user_constraint",
+         "description":"getUserConstraintList, getUserConstraintDetails"
+      },
+      {
+         "path":"\/user_group",
+         "description":"getUserGroupList, manageUserGroup, getUserGroupDetails"
+      },
+      {
+         "path":"\/user_tran_constraint",
+         "description":"getUserTranConstraintList, createUserTranConstraint, getUserTranConstraintDetails, modifyUserTranConstraint, deleteUserTranConstraint"
+      },
+      {
+         "path":"\/user_ui_state",
+         "description":"getUserUiStateList, manageUserUiState"
+      },
+      {
+         "path":"\/validation",
+         "description":"getValidationList, manageValidation"
+      },
+      {
+         "path":"\/validation_domain",
+         "description":"getValidationDomainList, manageValidationDomain"
+      },
+      {
+         "path":"\/validation_rule",
+         "description":"getValidationRuleList, manageValidationRule"
+      },
+      {
+         "path":"\/vendor",
+         "description":"getVendorList, manageVendor, getVendorDetails"
+      },
+      {
+         "path":"\/wave",
+         "description":"getWaveList, manageWave"
+      },
+      {
+         "path":"\/wave_audit",
+         "description":"getWaveAuditList"
+      },
+      {
+         "path":"\/wave_for_node",
+         "description":"createWaveForNode"
+      },
+      {
+         "path":"\/wave_status",
+         "description":"changeWaveStatus"
+      },
+      {
+         "path":"\/work_order",
+         "description":"getWorkOrderList, createWorkOrder, getWorkOrderDetails, modifyWorkOrder"
+      },
+      {
+         "path":"\/work_order_alloc_cons",
+         "description":"getWorkOrderAllocConsList"
+      },
+      {
+         "path":"\/work_order_appointment",
+         "description":"getWorkOrderAppointmentList"
+      },
+      {
+         "path":"\/work_order_appointment_options",
+         "description":"getWorkOrderAppointmentOptions"
+      },
+      {
+         "path":"\/work_order_status",
+         "description":"changeWorkOrderStatus"
+      },
+      {
+         "path":"\/work_order_status_audit",
+         "description":"getWorkOrderStatusAuditList"
+      },
+      {
+         "path":"\/xref_item",
+         "description":"getXrefItemDetails"
+      },
+      {
+         "path":"\/zone",
+         "description":"getZoneList, createZone, getZoneDetails, modifyZone, deleteZone"
+      },
+      {
+         "path":"\/zone_list_for_count",
+         "description":"getZoneListForCount"
+      }
+   ]
+}
