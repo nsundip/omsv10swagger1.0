@@ -1,0 +1,2521 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+	"title": "OMS V10 Catalog Swagger Definition"
+  },
+  "host": "old-rattlesnake-93.loca.lt",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/smcfs/restapi/item": {
+      "get": {
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "description": "Not used.",
+            "in": "query",
+            "name": "AuthenticationKey",
+            "required": false,
+            "type": "string"
+          },
+		  {
+            "name": "_loginid",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-example": "admin"
+          },
+          {
+            "name": "_token",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-example": "tGwksqDCZFPqUSGKsD1DItJphsXi9oRyiRd2A7ej6pguzklx5HB7uG3naTjSZGIt21"
+          },
+          {
+            "description": "Calling Organization used to determine catalog organization.",
+            "in": "query",
+            "name": "CallingOrganizationCode",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "This flag indicates whether this item is configured to be a service tool.",
+            "in": "query",
+            "name": "CanUseAsServiceTool",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "DisplayLocalizedFieldInLocale",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeChildItemsOfModelItems",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ExcludeItemsInPriceList",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "FromGlobalItemID",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "FromItemGroupCode",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "FromItemID",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "FromUnitOfMeasure",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Indicates if unpublished items needs to be listed.",
+            "in": "query",
+            "name": "GetUnpublishedItems",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Unique Global identifier used to cross reference an item with another catalog organization.",
+            "in": "query",
+            "name": "GlobalItemID",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "GlobalItemIDQryType",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IgnoreInvalidItems",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IgnoreOrdering",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "If the InheritAttributesFromClassification flag is passed as Y and the value of the item attribute is not defined at item level, the system will try to find the value from the classification definition for the ClassificationPurposeCode - 'Inherited Item Attributes'.",
+            "in": "query",
+            "name": "InheritAttributesFromClassification",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "IsForOrdering",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ItemGroupCode",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ItemGroupCodeQryType",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The unique identifier for the item.",
+            "in": "query",
+            "name": "ItemID",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ItemIDQryType",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Maximum records requested for output. Defaults to 5000.",
+            "in": "query",
+            "name": "MaximumRecords",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "OrganizationCode",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "This flag indicates if the Default Distribution Rule has to be overridden for real time availability monitoring.",
+            "in": "query",
+            "name": "RequiresDGOverride",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "To start from a particular Item key.",
+            "in": "query",
+            "name": "StartItemKey",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The sub-catalog organization that maintains the item definition.",
+            "in": "query",
+            "name": "SubCatalogOrganizationCode",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ToGlobalItemID",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ToItemGroupCode",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ToItemID",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ToUnitOfMeasure",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The unit of measure for item quantity.",
+            "in": "query",
+            "name": "UnitOfMeasure",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "UnitOfMeasureQryType",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "UserOrganizationCode",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Request a specific range of records. Sample value: 'items=20-39'",
+            "in": "header",
+            "name": "Range",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemList"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "get_item_item",
+        "summary": "Invokes the getItemList API"
+      },
+      "post": {
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemList"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "post_item_item",
+        "summary": "Invokes the manageItem API"
+      }
+    },
+    "/smcfs/restapi/item/{id}": {
+      "get": {
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "description": "Unique identifier",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Item"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "get_item_item_x",
+        "summary": "Invokes the getItemDetails API"
+      }
+    }
+  },
+  "definitions": {
+    "com.ibm.sterling.smcfs.item.AdditionalAttribute": {
+      "properties": {
+        "AdditionalAttributeKey": {
+          "description": "Primary key attribute of YFS_ADDITIONAL_ATTRIBUTE.",
+          "type": "string"
+        },
+        "AttributeDomainID": {
+          "description": "The unique identification of the attribute domain.",
+          "type": "string"
+        },
+        "AttributeGroupID": {
+          "description": "The unique identification of the attribute group.",
+          "type": "string"
+        },
+        "DoubleValue": {
+          "description": "The value of the assigned attribute whose data type is 'DECIMAL'.",
+          "type": "string"
+        },
+        "IntegerValue": {
+          "description": "The value of the assigned attribute whose data type is 'INTEGER'.",
+          "type": "string"
+        },
+        "IsInherited": {
+          "description": "This field indicates whether the assignment of attribute value as additional attribute was based on inheritance. For ParentTable='YFS_CATEGORY', a value of 'Y' indicates that the assignment is based on inheritance of the value assigned to the upper level category. For ParentTable='YFS_ITEM', a value of 'Y' indicates that the assignment is based on inheritance of the value assigned to the category to which the item belongs.",
+          "type": "string"
+        },
+        "Name": {
+          "description": "Name of the dynamic attribute.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "Value": {
+          "description": "Value of the attribute.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AdditionalAttributeList": {
+      "properties": {
+        "AdditionalAttribute": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AdditionalAttribute"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AlternateUOM": {
+      "properties": {
+        "Height": {
+          "description": "Height of an item with this alternate UOM.",
+          "type": "string"
+        },
+        "HeightUOM": {
+          "description": "Unit of measure in which item height is measured.",
+          "type": "string"
+        },
+        "IsOrderingUOM": {
+          "description": "Indicates if UOM can be used as ordering unit of measure.",
+          "type": "string"
+        },
+        "ItemKey": {
+          "description": "Item for which alternate UOM is being maintained.",
+          "type": "string"
+        },
+        "ItemUOMKey": {
+          "description": "Primary key attribute of YFS_ITEM_UOM.",
+          "type": "string"
+        },
+        "Length": {
+          "description": "Length of an item for with alternate UOM.",
+          "type": "string"
+        },
+        "LengthUOM": {
+          "description": "Unit of measure in which an item length is measured.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "Quantity": {
+          "description": "Conversion quantity to the inventory UOM.",
+          "type": "string"
+        },
+        "UnitOfMeasure": {
+          "description": "Alternate UOM applicable for the Item.",
+          "type": "string"
+        },
+        "Weight": {
+          "description": "Weight of an item with this alternate UOM.",
+          "type": "string"
+        },
+        "WeightUOM": {
+          "description": "Unit of measure in which a package's weight is measured.",
+          "type": "string"
+        },
+        "Width": {
+          "description": "Width of an item for with alternate UOM.",
+          "type": "string"
+        },
+        "WidthUOM": {
+          "description": "Unit of measure in which an item's width is measured.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AlternateUOMList": {
+      "properties": {
+        "AlternateUOM": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AlternateUOM"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.Asset": {
+      "properties": {
+        "AssetID": {
+          "description": "The unique identifier for the asset.",
+          "type": "string"
+        },
+        "AssetKey": {
+          "description": "Primary key attribute of YFS_ASSET.",
+          "type": "string"
+        },
+        "AssetLocaleList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AssetLocaleList"
+        },
+        "ContentID": {
+          "description": "Unique ID of the asset in the external location.",
+          "type": "string"
+        },
+        "ContentLocation": {
+          "description": "External location of the asset.",
+          "type": "string"
+        },
+        "ContentSize": {
+          "description": "Size of the asset.",
+          "type": "string"
+        },
+        "Description": {
+          "description": "Description of the asset.",
+          "type": "string"
+        },
+        "DisplayLocalizedFieldInLocale": {
+          "type": "string"
+        },
+        "Label": {
+          "description": "Label of the asset.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "Type": {
+          "description": "Type of asset.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AssetList": {
+      "properties": {
+        "Asset": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Asset"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        },
+        "TotalNumberOfRecords": {
+          "description": "Number of Records in the DB satisfying the passed criteria.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AssetLocale": {
+      "properties": {
+        "AssetKey": {
+          "description": "The reference key to the YFS_ASSET table.",
+          "type": "string"
+        },
+        "AssetLocaleKey": {
+          "description": "The primary key of the YFS_ASSET_LOCALE table.",
+          "type": "string"
+        },
+        "ContentID": {
+          "description": "Unique ID of the asset in the external location.",
+          "type": "string"
+        },
+        "ContentLocation": {
+          "description": "External location of the asset.",
+          "type": "string"
+        },
+        "Country": {
+          "description": "The country associated with the locale.",
+          "type": "string"
+        },
+        "Description": {
+          "description": "Description of the asset.",
+          "type": "string"
+        },
+        "Label": {
+          "description": "Label of the asset.",
+          "type": "string"
+        },
+        "Language": {
+          "description": "The language associated with the locale.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "Variant": {
+          "description": "The variant associated with the locale.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AssetLocaleList": {
+      "properties": {
+        "AssetLocale": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AssetLocale"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        },
+        "TotalNumberOfRecords": {
+          "description": "Number of Records in the DB satisfying the passed criteria.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AssignedValue": {
+      "properties": {
+        "DoubleValue": {
+          "description": "The value of the assigned attribute whose data type is 'DECIMAL'.",
+          "type": "string"
+        },
+        "IntegerValue": {
+          "description": "The value of the assigned attribute whose data type is 'INTEGER'.",
+          "type": "string"
+        },
+        "IsInherited": {
+          "description": "This field indicates whether the assignment of attribute value as additional attribute was based on inheritance. For ParentTable='YFS_CATEGORY', a value of 'Y' indicates that the assignment is based on inheritance of the value assigned to the upper level category. For ParentTable='YFS_ITEM', a value of 'Y' indicates that the assignment is based on inheritance of the value assigned to the category to which the item belongs.",
+          "type": "string"
+        },
+        "LongDescription": {
+          "description": "The detailed description of the  allowed value.",
+          "type": "string"
+        },
+        "SequenceNo": {
+          "description": "The sequence of the allowed value within the attribute definition.",
+          "type": "string"
+        },
+        "ShortDescription": {
+          "description": "The short description of the  allowed value.",
+          "type": "string"
+        },
+        "Value": {
+          "description": "Value of the attribute.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AssignedValueList": {
+      "properties": {
+        "AssignedValue": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AssignedValue"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.Attribute": {
+      "properties": {
+        "AllowMultipleValues": {
+          "description": "This flag indicates whether multiple values are allowed to be assigned for this attribute. Default value: \"N\".",
+          "type": "string"
+        },
+        "AllowedValueLength": {
+          "description": "The maximum length allowed for a value of Data Type = 'TEXT'. If not passed, the maximum length allowed is 200.",
+          "type": "string"
+        },
+        "AttributeAllowedValueList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AttributeAllowedValueList"
+        },
+        "AttributeDomainID": {
+          "description": "The unique identification of the attribute domain.",
+          "type": "string"
+        },
+        "AttributeGroupID": {
+          "description": "The unique identification of the attribute group.",
+          "type": "string"
+        },
+        "AttributeID": {
+          "description": "The unique identifier of the attribute.",
+          "type": "string"
+        },
+        "AttributeKey": {
+          "description": "The primary key for the YFS_ATTRIBUTE table.",
+          "type": "string"
+        },
+        "AttributePostFix": {
+          "description": "The post fix to be applied to the value of this attribute.",
+          "type": "string"
+        },
+        "AttributeReference": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AttributeReference"
+        },
+        "DataType": {
+          "description": "The data type allowed for the value of the attribute.",
+          "type": "string"
+        },
+        "DerivedFromAttribute": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.DerivedFromAttribute"
+        },
+        "DerivedFromAttributeKey": {
+          "description": "The primary key of the attribute record from which this attribute is derived.",
+          "type": "string"
+        },
+        "IsAllowedValueDefined": {
+          "description": "This flag indicates whether a set of allowed values are defined for this attribute. Default value: \"N\".",
+          "type": "string"
+        },
+        "IsValueMandatory": {
+          "description": "This flag indicates whether this attribute requires a mandatory selection of value when assigned to an item. Default value: \"N\".",
+          "type": "string"
+        },
+        "LongDescription": {
+          "description": "The detailed description of the  attribute.",
+          "type": "string"
+        },
+        "OrganizationCode": {
+          "description": "The organization that maintains the attribute domain.",
+          "type": "string"
+        },
+        "SequenceNo": {
+          "description": "The sequence of this attribute within the attribute group.",
+          "type": "string"
+        },
+        "ShortDescription": {
+          "description": "The short description of the  attribute.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AttributeAllowedValue": {
+      "properties": {
+        "AttributeAllowedValueKey": {
+          "description": "The primary key for the YFS_ATTR_ALLOWED_VALUE table.",
+          "type": "string"
+        },
+        "AttributeKey": {
+          "description": "The attribute that the allowed value belongs to.",
+          "type": "string"
+        },
+        "IsDefaultValue": {
+          "description": "This flag indicates whether this value is the default value of the attribute. Default value: \"N\".",
+          "type": "string"
+        },
+        "LongDescription": {
+          "description": "The detailed description of the  allowed value.",
+          "type": "string"
+        },
+        "NumericStep": {
+          "description": "The incremental step of the allowed value within the numeric value range. For instance, if the numeric value range is from 0 to 100 and the numeric step is 5, the allowed values are 0, 5, 10, 15, 20, 25, etc.",
+          "type": "string"
+        },
+        "SequenceNo": {
+          "description": "The sequence of the allowed value within the attribute definition.",
+          "type": "string"
+        },
+        "ShortDescription": {
+          "description": "The short description of the  allowed value.",
+          "type": "string"
+        },
+        "Value": {
+          "description": "The allowed value of the attribute that a user is entitled to assign. For an attribute of Numeric or Decimal Datatype, this value may be a list of values and/or a range of values. Each value in the list may be separated by a ';'. A range must be specified by two values separated by a '-'.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AttributeAllowedValueList": {
+      "properties": {
+        "AttributeAllowedValue": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AttributeAllowedValue"
+          },
+          "type": "array"
+        },
+        "TotalNumberOfRecords": {
+          "description": "Number of Records in the DB satisfying the passed criteria.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.AttributeReference": {
+      "properties": {
+        "AttributeKey": {
+          "description": "The attribute that this reference field is assigned to.",
+          "type": "string"
+        },
+        "AttributeReferenceKey": {
+          "description": "The primary key attribute of YFS_ATTRIBUTE_REFERENCE table.",
+          "type": "string"
+        },
+        "ReferenceName": {
+          "description": "The reference name that the predefined attribute represents. If the tablename is 'YFS_ITEM', then this field contains the XML name of the field that the attribute represents. If the tablename is 'YFS_ITEM_ALIAS', then this field contains the item alias name that the attribute represents.",
+          "type": "string"
+        },
+        "TableName": {
+          "description": "The name of the database table that contains the field assigned to a predefined attribute definition. Valid values : 'YFS_ITEM' or 'YFS_ITEM_ALIAS'.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.Category": {
+      "properties": {
+        "CategoryID": {
+          "description": "The unique identifier for this category.",
+          "type": "string"
+        },
+        "CategoryKey": {
+          "description": "The primary key for the YFS_CATEGORY table.",
+          "type": "string"
+        },
+        "CategoryPath": {
+          "description": "The path for the category.",
+          "type": "string"
+        },
+        "OrganizationCode": {
+          "description": "The code for the organization this category is associated with.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.CategoryList": {
+      "properties": {
+        "Category": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Category"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ChildItem": {
+      "properties": {
+        "ItemAttributeGroupTypeList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttributeGroupTypeList"
+        },
+        "ItemGroupCode": {
+          "description": "The item group code. Used to identify if the item is a Product, Provided Service, Provided Service Option, Delivery Service or Delivery Service Option.",
+          "type": "string"
+        },
+        "ItemID": {
+          "description": "The unique identifier for the item.",
+          "type": "string"
+        },
+        "ItemKey": {
+          "description": "The primary key for the YFS_ITEM table.",
+          "type": "string"
+        },
+        "OrganizationCode": {
+          "description": "The organization code whose product information is being stored.",
+          "type": "string"
+        },
+        "PrimaryInformation": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.PrimaryInformation"
+        },
+        "UnitOfMeasure": {
+          "description": "The unit of measure for item quantity.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ChildItemList": {
+      "properties": {
+        "ChildItem": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ChildItem"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ClassificationCodes": {
+      "properties": {
+        "CommodityCode": {
+          "description": "The commodity code of an item.",
+          "type": "string"
+        },
+        "ECCNNo": {
+          "description": "The ECCN number of an item.",
+          "type": "string"
+        },
+        "HarmonizedCode": {
+          "description": "The harmonized code of an item.",
+          "type": "string"
+        },
+        "HazmatClass": {
+          "description": "The hazardous material classification code of an item.",
+          "type": "string"
+        },
+        "Model": {
+          "description": "This field describes the identifier of the item with variations to which this item belongs.",
+          "type": "string"
+        },
+        "NAICSCode": {
+          "description": "The NAICS code of an item.",
+          "type": "string"
+        },
+        "NMFCClass": {
+          "description": "The NMFC class of an item.",
+          "type": "string"
+        },
+        "NMFCCode": {
+          "description": "The NMFC code for an item.",
+          "type": "string"
+        },
+        "OperationalConfigurationComplete": {
+          "description": "This flag indicates whether the operational configuration is complete.",
+          "type": "string"
+        },
+        "PickingType": {
+          "description": "The picking type code of an item.",
+          "type": "string"
+        },
+        "PostingClassification": {
+          "description": "The posting classification. This will have the item grouping value for the Financial Ledger groups.",
+          "type": "string"
+        },
+        "Schedule_B_Code": {
+          "description": "The schedule B code of an item.",
+          "type": "string"
+        },
+        "StorageType": {
+          "description": "The storage type code of an item.",
+          "type": "string"
+        },
+        "TaxProductCode": {
+          "description": "The tax product code of an item.",
+          "type": "string"
+        },
+        "UNSPSC": {
+          "description": "The UNSPSC code of an item.",
+          "type": "string"
+        },
+        "VelocityCode": {
+          "description": "The velocity code.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.Component": {
+      "properties": {
+        "ComponentDescription": {
+          "description": "Description of the Component Item",
+          "type": "string"
+        },
+        "ComponentItemGroupCode": {
+          "description": "Item Group Code for the Component Item",
+          "type": "string"
+        },
+        "ComponentItemID": {
+          "description": "Along with ComponentOrganizationCode and ComponentUnitOfMeasure, it identifies a component item.",
+          "type": "string"
+        },
+        "ComponentItemKey": {
+          "description": "Component item's primary key",
+          "type": "string"
+        },
+        "ComponentKitCode": {
+          "description": "Item Kit Code for the Component Item",
+          "type": "string"
+        },
+        "ComponentOrganizationCode": {
+          "description": "Organization that maintains catalog",
+          "type": "string"
+        },
+        "ComponentUnitOfMeasure": {
+          "description": "Unit of measure for the Component Item",
+          "type": "string"
+        },
+        "Item": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Item"
+        },
+        "ItemKey": {
+          "description": "An item for which components are defined.",
+          "type": "string"
+        },
+        "KitQuantity": {
+          "description": "Amount of a component item that is contained in a parent item.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.Components": {
+      "properties": {
+        "Component": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Component"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.DerivedFromAttribute": {
+      "properties": {
+        "AttributeDomainID": {
+          "description": "The unique identification of the attribute domain.",
+          "type": "string"
+        },
+        "AttributeGroupID": {
+          "description": "The unique identification of the attribute group.",
+          "type": "string"
+        },
+        "AttributeID": {
+          "description": "The unique identifier of the attribute.",
+          "type": "string"
+        },
+        "AttributeKey": {
+          "description": "The primary key for the YFS_ATTRIBUTE table.",
+          "type": "string"
+        },
+        "OrganizationCode": {
+          "description": "The organization that maintains the attribute domain.",
+          "type": "string"
+        },
+        "ShortDescription": {
+          "description": "The short description of the  attribute.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.HazmatInformation": {
+      "properties": {
+        "CargoAir": {
+          "description": "Indicates the max quantity that can be shipped while shipping via cargo aircraft.",
+          "type": "string"
+        },
+        "Exception": {
+          "description": "Indicates the packing exceptions while shipping the hazardous material.",
+          "type": "string"
+        },
+        "HazardClass": {
+          "description": "Indicates the category of a hazard assigned to a hazardous material. Its value ranges from 1 to 9.",
+          "type": "string"
+        },
+        "HazmatComplianceKey": {
+          "description": "The primary key for the YFS_HAZMAT_COMPLIANCE table.",
+          "type": "string"
+        },
+        "Label": {
+          "description": "Indicates the label code.",
+          "type": "string"
+        },
+        "PackingGroup": {
+          "description": "Packing Groups (PG) indicate the degree of danger of a hazardous material within its hazard class or division and relate to the strength of packaging required for shipment. It can take values Packing Group I - high danger, Packing Group II - medium danger, Packing Group III - low danger.",
+          "type": "string"
+        },
+        "PassengerAir": {
+          "description": "Indicates the max quantity that can be shipped while shipping via passenger aircraft or rail.",
+          "type": "string"
+        },
+        "ProperShippingName": {
+          "description": "Indicates the proper shipping name or description of hazardous material.",
+          "type": "string"
+        },
+        "QtyBulk": {
+          "description": "Indicates the max quantity that can be shipped while shipping bulk.",
+          "type": "string"
+        },
+        "QtyNonBulk": {
+          "description": "Indicates the max quantity that can be shipped while shipping non bulk.",
+          "type": "string"
+        },
+        "SortOrder": {
+          "description": "Unique number to identify a hazardous substance. The difference between the preceding and the succeeding sort order value equals to five. This is to accommodate new hazardous materials.",
+          "type": "string"
+        },
+        "SpecialProvisions": {
+          "description": "Indicates the special provisions to be provided while shipping the hazardous material.",
+          "type": "string"
+        },
+        "Symbols": {
+          "description": "Indicates the symbol of hazardous material.",
+          "type": "string"
+        },
+        "UNNumber": {
+          "description": "UN numbers are four-digit numbers that identify hazardous substances and products (such as explosives and poisonous materials) of commercial importance. This is widely used in international commerce, for instance to label the contents of shipping containers.",
+          "type": "string"
+        },
+        "Vessel": {
+          "description": "Specifies where the cargo is stowed on a vessel.",
+          "type": "string"
+        },
+        "VesselSP": {
+          "description": "Specifies other stowage plans.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.InheritedAttribute": {
+      "properties": {
+        "InheritedFrom": {
+          "description": "Value of the Column is obtained from this classification location.",
+          "type": "string"
+        },
+        "IsInherited": {
+          "type": "string"
+        },
+        "Name": {
+          "description": "Column name of the attribute.",
+          "type": "string"
+        },
+        "Value": {
+          "description": "Value of the columns specified in Name attribute",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.InheritedAttributes": {
+      "properties": {
+        "InheritedAttribute": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.InheritedAttribute"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.InventoryParameters": {
+      "properties": {
+        "ATPRule": {
+          "description": "The available to promise rule to be used for the item to determine availability.",
+          "type": "string"
+        },
+        "AdvanceNotificationTime": {
+          "description": "The advance notification time for this item. Communication to ship the order to shipping node/supplier is made at most this many days before the expected shipment date. Used during the release process. Default value: 0.",
+          "type": "string"
+        },
+        "DefaultExpirationDays": {
+          "description": "The default for number of days after which an item would expire.",
+          "type": "string"
+        },
+        "FutureSafetyFactorPercentage": {
+          "description": "The future safety factor percentage of this item.  The FutureSafetyFactorPercentage will be excluded from the actual future availability of the item if the scheduling rule, node type, and supply type are configured to apply future safety factor.",
+          "type": "string"
+        },
+        "InventoryMonitorRule": {
+          "description": "The monitoring rule that will be used by the availability monitor.",
+          "type": "string"
+        },
+        "IsFifoTracked": {
+          "description": "This flag indicates whether an item is FIFO tracked. Default value: N.",
+          "type": "string"
+        },
+        "IsItemBasedAllocationAllowed": {
+          "description": "This flag indicates whether the item is allowed for Item Based Allocation process.",
+          "type": "string"
+        },
+        "IsSerialTracked": {
+          "description": "This flag indicates whether an item is to be serial tracked in inventory.",
+          "type": "string"
+        },
+        "LeadTime": {
+          "description": "The lead time for getting the product delivered. Purchase order placed today will arrive after this many days at the warehouse. Default value: 0.",
+          "type": "string"
+        },
+        "MaximumNotificationTime": {
+          "description": "The maximum notification time for this item. Communication to ship the order to shipping node/supplier is made at most this many shipping calendar hours before the expected shipment date. Used during the release process. Default value: 0.",
+          "type": "string"
+        },
+        "MinNotificationTime": {
+          "description": "The minimum notification time for this item. Communication to ship the order should be made at least this many days before the expected shipment date. Used to determine the earliest ship date on the line. Default value: 0.",
+          "type": "string"
+        },
+        "NodeLevelInventoryMonitorRule": {
+          "description": "The monitoring rule that will be used by the real-time availability monitor for node-level monitoring.",
+          "type": "string"
+        },
+        "OnhandSafetyFactorPercentage": {
+          "description": "The on-hand safety factor percentage of this item.  The OnhandSafetyFactorPercentage will be excluded from the actual on-hand availability of the item if the scheduling rule, node type, and supply type are configured to apply on-hand safety factor.   OnhandSafetyFactorPercentage will be used only when OnhandSafetyFactorQuantity is not specified.",
+          "type": "string"
+        },
+        "OnhandSafetyFactorQuantity": {
+          "description": "The on-hand safety factor quantity of this item.  The OnhandSafetyFactorQuantity will be excluded from the actual on-hand availability of the item if the scheduling rule, node type, and supply type are configured to apply on-hand safety factor.",
+          "type": "string"
+        },
+        "ProcessingTime": {
+          "description": "Define processing time for items in days such as special services.",
+          "type": "string"
+        },
+        "RequiresDGOverride": {
+          "description": "This flag indicates if the Default Distribution Rule has to be overridden for real time availability monitoring.",
+          "type": "string"
+        },
+        "TagControlFlag": {
+          "description": "This field indicates whether an item is tag controlled. Inventory module uses this flag to determine if additional inventory attributes need to be stored for the item.",
+          "type": "string"
+        },
+        "TagReqAtReceipt": {
+          "description": "This field is currently not used.",
+          "type": "string"
+        },
+        "TagReqAtShipment": {
+          "description": "This field is currently not used.",
+          "type": "string"
+        },
+        "TimeSensitive": {
+          "description": "This flag indiactes whether the item is time-sensitive. Inventory module uses this to determine if inventory is dated. Default value: N.",
+          "type": "string"
+        },
+        "UseUnplannedInventory": {
+          "description": "This flag indicates whether the item is allowed to use unplanned inventory. Default value: N.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.InventoryTagAttributes": {
+      "properties": {
+        "BatchNo": {
+          "description": "Specify whether this attibute can be used as a Tag Identifier or a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 02 - Use as Tag Identifier, 03 - Not Use.",
+          "type": "string"
+        },
+        "ItemKey": {
+          "description": "An item for which inventory attributes are defined.",
+          "type": "string"
+        },
+        "ItemTagKey": {
+          "description": "Primary key attribute of YFS_ITEM_TAG.",
+          "type": "string"
+        },
+        "LotAttribute1": {
+          "description": "Specify whether this attibute can be used as a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 03 - Not Use.",
+          "type": "string"
+        },
+        "LotAttribute2": {
+          "description": "Specify whether this attibute can be used as a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 03 - Not Use.",
+          "type": "string"
+        },
+        "LotAttribute3": {
+          "description": "Specify whether this attibute can be used as a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 03 - Not Use.",
+          "type": "string"
+        },
+        "LotKeyReference": {
+          "description": "Specify whether this attibute can be used as a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 03 - Not Use.",
+          "type": "string"
+        },
+        "LotNumber": {
+          "description": "Specify whether this attibute can be used as a Tag Identifier or a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 02 - Use as Tag Identifier, 03 - Not Use.",
+          "type": "string"
+        },
+        "ManufacturingDate": {
+          "description": "Specify whether this attibute can be used as a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 03 - Not Use.",
+          "type": "string"
+        },
+        "RevisionNo": {
+          "description": "Specify whether this attibute can be used as a Tag Identifier or a Tag Descriptor.  Valid values:  01 - Use as Tag Descriptor, 02 - Use as Tag Identifier, 03 - Not Use.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.Item": {
+      "properties": {
+        "Action": {
+          "type": "string"
+        },
+        "AdditionalAttributeList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AdditionalAttributeList"
+        },
+        "AlternateUOMList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AlternateUOMList"
+        },
+        "AssetList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AssetList"
+        },
+        "AssociateItemToCategories": {
+          "type": "string"
+        },
+        "CanUseAsServiceTool": {
+          "description": "This flag indicates whether this item is configured to be a service tool.",
+          "type": "string"
+        },
+        "CategoryList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.CategoryList"
+        },
+        "CheckInventoryBeforeDelete": {
+          "type": "string"
+        },
+        "ChildItemList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ChildItemList"
+        },
+        "ClassificationCodes": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ClassificationCodes"
+        },
+        "Components": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Components"
+        },
+        "GlobalItemID": {
+          "description": "The unique global identifier used to cross reference an item with another catalog organization.",
+          "type": "string"
+        },
+        "HazmatInformation": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.HazmatInformation"
+        },
+        "InheritAttributesFromClassification": {
+          "description": "If the InheritAttributesFromClassification flag is passed as Y and the value of the item attribute is not defined at item level, the system will try to find the value from the classification definition for the ClassificationPurposeCode - 'Inherited Item Attributes'.",
+          "type": "string"
+        },
+        "InheritedAttributes": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.InheritedAttributes"
+        },
+        "InventoryParameters": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.InventoryParameters"
+        },
+        "InventoryTagAttributes": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.InventoryTagAttributes"
+        },
+        "IsItemSuperseded": {
+          "description": "This flag indicates if this item has been superseded. \n\t\t\t\t\tValid Values: ,",
+          "type": "string"
+        },
+        "ItemAliasList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAliasList"
+        },
+        "ItemAttributeGroupTypeList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttributeGroupTypeList"
+        },
+        "ItemExclusionList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemExclusionList"
+        },
+        "ItemGroupCode": {
+          "description": "The item group code. Used to identify if the item is a Product, Provided Service, Provided Service Option, Delivery Service or Delivery Service Option.",
+          "type": "string"
+        },
+        "ItemID": {
+          "description": "The unique identifier for the item.",
+          "type": "string"
+        },
+        "ItemInstructionList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemInstructionList"
+        },
+        "ItemKey": {
+          "description": "The primary key for the YFS_ITEM table.",
+          "type": "string"
+        },
+        "ItemLocaleList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemLocaleList"
+        },
+        "ItemOptionList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemOptionList"
+        },
+        "ItemServiceAssocList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemServiceAssocList"
+        },
+        "ItemServiceSkillList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemServiceSkillList"
+        },
+        "LanguageDescriptionList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.LanguageDescriptionList"
+        },
+        "MaxModifyTS": {
+          "description": "This field indicates the maximum modify timestamp of this item and its related entities.",
+          "type": "string"
+        },
+        "OrganizationCode": {
+          "description": "The organization code whose product information is being stored.",
+          "type": "string"
+        },
+        "PrimaryInformation": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.PrimaryInformation"
+        },
+        "SafetyFactorDefinitions": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.SafetyFactorDefinitions"
+        },
+        "ServiceActivities": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ServiceActivities"
+        },
+        "SubCatalogOrganizationCode": {
+          "description": "The sub-catalog organization that maintains the item definition.",
+          "type": "string"
+        },
+        "SyncTS": {
+          "type": "string"
+        },
+        "UnitOfMeasure": {
+          "description": "The unit of measure for item quantity.",
+          "type": "string"
+        },
+        "WIPCostFactorPurpose": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.WIPCostFactorPurpose"
+        },
+        "WMSItemAttributes": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.WMSItemAttributes"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAlias": {
+      "properties": {
+        "Action": {
+          "type": "string"
+        },
+        "AliasName": {
+          "description": "Alias type. For example, UPC, EAN, MFG. CODE.",
+          "type": "string"
+        },
+        "AliasValue": {
+          "description": "Alias value for the corresponding alias name.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAliasList": {
+      "properties": {
+        "ItemAlias": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAlias"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttrGroupLocale": {
+      "properties": {
+        "Country": {
+          "description": "The country associated with the locale.",
+          "type": "string"
+        },
+        "ItemAttrGroupKey": {
+          "description": "The reference key to the YFS_ITEM_ATTR_GROUP table.",
+          "type": "string"
+        },
+        "ItemAttrGroupLocaleKey": {
+          "description": "The primary key of the YFS_ITEM_ATTR_GROUP_LOCALE table.",
+          "type": "string"
+        },
+        "ItemAttributeGroupDescription": {
+          "description": "The description of this item attribute group.",
+          "type": "string"
+        },
+        "Language": {
+          "description": "The language associated with the locale.",
+          "type": "string"
+        },
+        "Variant": {
+          "description": "The variant associated with the locale.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttrGroupLocaleList": {
+      "properties": {
+        "ItemAttrGroupLocale": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttrGroupLocale"
+          },
+          "type": "array"
+        },
+        "TotalNumberOfRecords": {
+          "description": "Number of Records in the DB satisfying the passed criteria.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttrGrpTypeLocale": {
+      "properties": {
+        "Country": {
+          "description": "The country associated with the locale.",
+          "type": "string"
+        },
+        "Description": {
+          "description": "The description of this group type.",
+          "type": "string"
+        },
+        "ItemAttrGroupTypeKey": {
+          "description": "The reference key to the YFS_ITEM_ATTR_GROUP_TYPE table.",
+          "type": "string"
+        },
+        "ItemAttrGrpTypeLocaleKey": {
+          "description": "The primary key of the YFS_ITEM_ATTR_GRP_TYPE_LOCALE table.",
+          "type": "string"
+        },
+        "Language": {
+          "description": "The language associated with the locale.",
+          "type": "string"
+        },
+        "Variant": {
+          "description": "The variant associated with the locale.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttrGrpTypeLocaleList": {
+      "properties": {
+        "ItemAttrGrpTypeLocale": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttrGrpTypeLocale"
+          },
+          "type": "array"
+        },
+        "TotalNumberOfRecords": {
+          "description": "Number of Records in the DB satisfying the passed criteria.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttribute": {
+      "properties": {
+        "AssignedValueList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.AssignedValueList"
+        },
+        "Attribute": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Attribute"
+        },
+        "AttributeDomainID": {
+          "description": "The unique identification of the attribute domain.",
+          "type": "string"
+        },
+        "AttributeGroupID": {
+          "description": "The unique identification of the attribute group.",
+          "type": "string"
+        },
+        "CategoryKey": {
+          "description": "The category that this attribute is assigned to.",
+          "type": "string"
+        },
+        "IsInherited": {
+          "description": "This flag indicates whether the assignment is based on inheritance of the attribute assigned to the upper level category.",
+          "type": "string"
+        },
+        "IsKeyAttribute": {
+          "description": "This flag indicates that the item attribute is a key attribute for the item.",
+          "type": "string"
+        },
+        "ItemAttributeDescription": {
+          "description": "The description of specification attribute on an item.",
+          "type": "string"
+        },
+        "ItemAttributeGroupKey": {
+          "description": "The specification group that this specification attribute belongs to.",
+          "type": "string"
+        },
+        "ItemAttributeGroupType": {
+          "description": "The item attribute group type this attribute belongs to.",
+          "type": "string"
+        },
+        "ItemAttributeKey": {
+          "description": "Primary key attribute of YFS_ITEM_ATTR.",
+          "type": "string"
+        },
+        "ItemAttributeName": {
+          "description": "The name of the item attribute that the specification attribute represents.",
+          "type": "string"
+        },
+        "SequenceNo": {
+          "description": "The sequence of the specifcation attribute within the specification group.",
+          "type": "string"
+        },
+        "Value": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttributeGroup": {
+      "properties": {
+        "ItemAttrGroupLocaleList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttrGroupLocaleList"
+        },
+        "ItemAttributeGroupDescription": {
+          "description": "The description of this item attribute group.",
+          "type": "string"
+        },
+        "ItemAttributeGroupID": {
+          "description": "The identification of the item attribute group.",
+          "type": "string"
+        },
+        "ItemAttributeGroupKey": {
+          "description": "Primary key attribute of YFS_ITEM_ATTR_GROUP.",
+          "type": "string"
+        },
+        "ItemAttributeGroupPath": {
+          "description": "The path of the attribute group within the attribute domain.",
+          "type": "string"
+        },
+        "ItemAttributeList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttributeList"
+        },
+        "ParentItemAttributeGroupKey": {
+          "description": "The primary key of the parent item attribute group of this item attribute group.",
+          "type": "string"
+        },
+        "SequenceNo": {
+          "description": "The sequence of the item attribute group within the item attribute group type.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttributeGroupList": {
+      "properties": {
+        "ItemAttributeGroup": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttributeGroup"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttributeGroupType": {
+      "properties": {
+        "ClassificationPurposeCode": {
+          "description": "The classification purpose this group type is associated with.",
+          "type": "string"
+        },
+        "Description": {
+          "description": "The description of this group type.",
+          "type": "string"
+        },
+        "IsForMaintenance": {
+          "description": "This flag indicates whether the item attribute group type can be assigned to a category hierarchy of maintenance. Valid values : Y/N.",
+          "type": "string"
+        },
+        "IsForSelling": {
+          "description": "This flag indicates whether the item attribute group type can be assigned to a category hierarchy of selling. Valid values : Y/N.",
+          "type": "string"
+        },
+        "IsSingleGroup": {
+          "description": "Indicates that this group type will only have a single group defined.",
+          "type": "string"
+        },
+        "IsValidForCategory": {
+          "description": "This flag indicates whether the item attribute group type can be assigned to categories. Valid values : Y/N.",
+          "type": "string"
+        },
+        "IsValidForClassification": {
+          "description": "This flag indicates whether the item attribute group type can be assigned to classifications. Valid values : Y/N. If value is 'Y', then CLASSIFICATION_PURPOSE is required for selecting classification.",
+          "type": "string"
+        },
+        "ItemAttrGrpTypeLocaleList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttrGrpTypeLocaleList"
+        },
+        "ItemAttributeGroupList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttributeGroupList"
+        },
+        "ItemAttributeGroupType": {
+          "description": "The  of the item attribute groups returned.  possible values include:\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAll s for which there is a  associated with the 's corresponding  will be returned.",
+          "type": "string"
+        },
+        "ItemAttributeGroupTypeKey": {
+          "description": "Primary key attribute of YFS_ITEM_ATTR_GROUP_TYPE.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttributeGroupTypeList": {
+      "properties": {
+        "ItemAttributeGroupType": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttributeGroupType"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemAttributeList": {
+      "properties": {
+        "ItemAttribute": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemAttribute"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemExclusion": {
+      "properties": {
+        "ExclusionCode": {
+          "description": "Exclusion code for an item.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemExclusionList": {
+      "properties": {
+        "ItemExclusion": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemExclusion"
+          },
+          "type": "array"
+        },
+        "Remove": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Remove"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemInstruction": {
+      "properties": {
+        "InstructionCode": {
+          "description": "Standard pre-defined instruction code as defined by the catalog organization.",
+          "type": "string"
+        },
+        "InstructionText": {
+          "description": "Free form instruction text for the given instruction type.",
+          "type": "string"
+        },
+        "InstructionType": {
+          "description": "Instruction type as defined by the catalog organization.",
+          "type": "string"
+        },
+        "ItemInstructionKey": {
+          "description": "Primary key attribute of YFS_ITEM_INSTRUCTION.",
+          "type": "string"
+        },
+        "ItemKey": {
+          "description": "Item for which instructions are maintained.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "SeqNo": {
+          "description": "Instruction SequenceNo for a given instruction type.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemInstructionList": {
+      "properties": {
+        "ItemInstruction": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemInstruction"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemList": {
+      "properties": {
+        "ComputeUnitCost": {
+          "type": "string"
+        },
+        "InsertMissingAttributeAllowedValues": {
+          "type": "string"
+        },
+        "Item": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.Item"
+          },
+          "type": "array"
+        },
+        "LastItemKey": {
+          "description": "Indicates the last fetched Item and may be used as restart for listing the next time.",
+          "type": "string"
+        },
+        "LastRecordSet": {
+          "description": "Indicates if there are more records in the DB. The value of this attribute is set to 'Y' if there are more \n\t\t\t\trecords than  provided in the input.",
+          "type": "string"
+        },
+        "TotalItemList": {
+          "description": "Number of Records returned",
+          "type": "string"
+        },
+        "TotalNumberOfRecords": {
+          "description": "Number of Records in the DB satisfying the passed criteria.",
+          "type": "string"
+        },
+        "ValidateAdditionalAttributeValues": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemLocale": {
+      "properties": {
+        "Country": {
+          "description": "The country associated with the locale.",
+          "type": "string"
+        },
+        "ImageID": {
+          "description": "Unique ID of the image in the external location.",
+          "type": "string"
+        },
+        "ItemKey": {
+          "description": "The reference key to the YFS_ITEM table.",
+          "type": "string"
+        },
+        "ItemLocaleKey": {
+          "description": "The primary key of the YFS_ITEM_LOCALE table.",
+          "type": "string"
+        },
+        "Language": {
+          "description": "The language associated with the locale.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "PrimaryInformation": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.PrimaryInformation"
+        },
+        "Variant": {
+          "description": "The variant associated with the locale.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemLocaleList": {
+      "properties": {
+        "ItemLocale": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemLocale"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        },
+        "TotalNumberOfRecords": {
+          "description": "Number of Records in the DB satisfying the passed criteria.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemOption": {
+      "properties": {
+        "ItemKey": {
+          "description": "Item for which Item Option is being maintained.",
+          "type": "string"
+        },
+        "ItemOptionKey": {
+          "description": "Primary key attribute of YFS_ITEM_OPTION.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "OptionItemId": {
+          "description": "The unique ideintifier for an Item Option that is associated to a provided service or delivery service item.",
+          "type": "string"
+        },
+        "OptionUOM": {
+          "description": "UOM Of the Item Option that is associated to a provided service or delivery service item.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemOptionList": {
+      "properties": {
+        "ItemOption": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemOption"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemServiceAssoc": {
+      "properties": {
+        "CategoryKey": {
+          "description": "Classification to which the services are being associated.",
+          "type": "string"
+        },
+        "HoldSchedTillCompletion": {
+          "description": "Flag to indicate whether to hold the schedule for the line containing provided service or delivery service item till line containing the parent item has been shipped.  This value will be copied over to YFS_ORDER_PROD_SER_ASSOC table when the association is used.",
+          "type": "string"
+        },
+        "ItemKey": {
+          "description": "Item for which service association is being maintained.",
+          "type": "string"
+        },
+        "ItemServiceAssocKey": {
+          "description": "Primary key attribute of YFS_ITEM_SERVICE_ASSOC.",
+          "type": "string"
+        },
+        "ItemServiceAssocSkillList": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemServiceAssocSkillList"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "PricingProductQuantity": {
+          "description": "Pricing Quantity for item used in this association.  This value will be copied over to YFS_ORDER_PROD_SER_ASSOC table when the association is used.",
+          "type": "string"
+        },
+        "PricingServiceQuantity": {
+          "description": "Pricing Quantity for service used in this association.  This value will be copied over to YFS_ORDER_PROD_SER_ASSOC table when the association is used.",
+          "type": "string"
+        },
+        "ProductQuantity": {
+          "description": "Quantity for item used in this association.  This value will be copied over to YFS_ORDER_PROD_SER_ASSOC table when the association is used.",
+          "type": "string"
+        },
+        "ServiceItemDesc": {
+          "description": "The short description of the item.",
+          "type": "string"
+        },
+        "ServiceItemGroupCode": {
+          "description": "ItemGroupCode for the service or delivery item.  Valid values are PS - Provided Service, DS - Delivery Service.",
+          "type": "string"
+        },
+        "ServiceItemId": {
+          "description": "Provided service or delivery service item associated as option when selling the parent item.",
+          "type": "string"
+        },
+        "ServiceQuantity": {
+          "description": "Quantity for service used in this association.  This value will be copied over to YFS_ORDER_PROD_SER_ASSOC table when the association is used.",
+          "type": "string"
+        },
+        "ServiceTimeOffset": {
+          "type": "string"
+        },
+        "ServiceUOM": {
+          "description": "UOM of the provided service or delivery service item associated to the parent item.",
+          "type": "string"
+        },
+        "TimeOffsetInMinutes": {
+          "description": "Specifies the service time offset between services in Hours.  This value will be copied over to YFS_ORDER_PROD_SER_ASSOC table when the association is used.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemServiceAssocList": {
+      "properties": {
+        "ItemServiceAssoc": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemServiceAssoc"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemServiceAssocSkill": {
+      "properties": {
+        "Description": {
+          "description": "Description of the Service Skill.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "ServiceSkillId": {
+          "description": "Identifier of a Service Skill.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemServiceAssocSkillList": {
+      "properties": {
+        "ItemServiceAssocSkill": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemServiceAssocSkill"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemServiceSkill": {
+      "properties": {
+        "Description": {
+          "description": "Description of the Service Skill.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "ServiceSkillId": {
+          "description": "Identifier of a Service Skill.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ItemServiceSkillList": {
+      "properties": {
+        "ItemServiceSkill": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemServiceSkill"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.LanguageDescription": {
+      "properties": {
+        "Description": {
+          "description": "A localized description.",
+          "type": "string"
+        },
+        "ExtendedDescription": {
+          "description": "An extended localized description.",
+          "type": "string"
+        },
+        "ExtendedDisplayDescription": {
+          "description": "Localized extended display description.",
+          "type": "string"
+        },
+        "LocaleCode": {
+          "description": "Locale for which the extended description is stored.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "ShortDescription": {
+          "description": "Short description.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.LanguageDescriptionList": {
+      "properties": {
+        "LanguageDescription": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.LanguageDescription"
+          },
+          "type": "array"
+        },
+        "Reset": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.PrimaryInformation": {
+      "properties": {
+        "AgeVerificationCode": {
+          "description": "This field indicates the age verification code for the item",
+          "type": "string"
+        },
+        "AllowGiftWrap": {
+          "description": "This flag indicates that the item can be gift wrapped.",
+          "type": "string"
+        },
+        "AssumeInfiniteInventory": {
+          "description": "This flag indicates whether an item is assumed to be always available. Default value: N.",
+          "type": "string"
+        },
+        "BOMXML": {
+          "type": "string"
+        },
+        "BundleFulfillmentMode": {
+          "description": "The way in which the bundle will be fulfilled. It can be Ship Together(01), Ship Independent(00), or Deliver Together(02) for Bundle Item. Default value is Ship Together(01) for Bundle Item.",
+          "type": "string"
+        },
+        "BundlePricingStrategy": {
+          "description": "Determines how a bundle will be priced. A bundle can by priced by PARENT (only the parent's price is used), COMP (only the components' prices are used), or ALL (both parent's and components' prices are used). Default: PARENT.",
+          "type": "string"
+        },
+        "CapacityPerOrderedQty": {
+          "description": "The capacity per ordered quantity.  Used to compute required capacity based on line ordered quantity.",
+          "type": "string"
+        },
+        "CapacityQuantityStrategy": {
+          "description": "This field determines how the capacity quantity is arrived at for provided and delivery services from the inventory quantity.   Valid values: ORD - Based on the ordered service quantity; ASSOC - Based on the service and product association.  Default value: ORD.",
+          "type": "string"
+        },
+        "ColorCode": {
+          "description": "This field describes color code for the item.",
+          "type": "string"
+        },
+        "ComputedUnitCost": {
+          "description": "The computed standard cost of the item. This will be set when createItem/ modifyItem API is called specifically with computeUnitCost flag as Y and item unit cost is calculated based on REPLACEMENT COST.",
+          "type": "string"
+        },
+        "ConfigurationKey": {
+          "description": "A reference to the BOM XML if the item is pre-configured.",
+          "type": "string"
+        },
+        "ConfigurationModelName": {
+          "description": "The configuration model name for this item.",
+          "type": "string"
+        },
+        "ConfiguredModelKey": {
+          "description": "The key of the configured model for a configurable item.",
+          "type": "string"
+        },
+        "CostCurrency": {
+          "description": "The currency in which the item's cost is defined.",
+          "type": "string"
+        },
+        "CountryOfOrigin": {
+          "description": "The item's country of origin/manufacture.",
+          "type": "string"
+        },
+        "CreditWOReceipt": {
+          "description": "This flag indicates if credit may be provided with out receipts on return of an item.",
+          "type": "string"
+        },
+        "DefaultProductClass": {
+          "description": "The default product class of an item.",
+          "type": "string"
+        },
+        "Description": {
+          "description": "The description of the item.",
+          "type": "string"
+        },
+        "DisplayItemDescription": {
+          "description": "User defined description of the item.",
+          "type": "string"
+        },
+        "EffectiveEndDate": {
+          "description": "Defines the end time when the item is valid.",
+          "type": "string"
+        },
+        "EffectiveStartDate": {
+          "description": "Defines the start time when the item is valid.",
+          "type": "string"
+        },
+        "ExtendedDescription": {
+          "description": "The extended multi-line description of the Item.",
+          "type": "string"
+        },
+        "ExtendedDisplayDescription": {
+          "description": "Display description for the item.",
+          "type": "string"
+        },
+        "FixedCapacityQtyPerLine": {
+          "description": "The fixed capacity quantity will be assumed irrespective of the inventory quantity for the line shipped with this item when the strategy is fixed.",
+          "type": "string"
+        },
+        "FixedPricingQtyPerLine": {
+          "description": "The fixed pricing quanity per line. Fixed pricing quantity will be assumed irrespective of the inventory quantity for the line shipped with this item.",
+          "type": "string"
+        },
+        "ImageID": {
+          "description": "Unique ID of the image in the external location.",
+          "type": "string"
+        },
+        "ImageLabel": {
+          "description": "Label of the image.",
+          "type": "string"
+        },
+        "ImageLocation": {
+          "description": "External location of the image.",
+          "type": "string"
+        },
+        "InvoiceBasedOnActuals": {
+          "description": "This flag indicates whether invoicing is done based on actual weight to support catch weight items.",
+          "type": "string"
+        },
+        "InvolvesSegmentChange": {
+          "description": "This flag indicates whether an item performs segment change.",
+          "type": "string"
+        },
+        "IsAirShippingAllowed": {
+          "description": "Indicates if item can be shipped by air. Default value: Y.",
+          "type": "string"
+        },
+        "IsConfigurable": {
+          "description": "This flag indicates that the item is a configurable item. A configurable item can either be a bundle or a physical kit. A configurable bundle item offers a number of different options from which a customer can select before buying the product. Components for a bundle are not specified in the catalog as the actual components will be determined by the user when an order is placed. A physical kit must always be pre-configured.",
+          "type": "string"
+        },
+        "IsDeliveryAllowed": {
+          "description": "This flag indicates whether the delivery method DEL is allowed for item. Default value: N.",
+          "type": "string"
+        },
+        "IsEligibleForShippingDiscount": {
+          "description": "Determines whether the item is eligible for shipping discounts. Default Value: Y.",
+          "type": "string"
+        },
+        "IsForwardingAllowed": {
+          "description": "This flag indicates if the item can be forwarded for zone skipping. Default value: Y.",
+          "type": "string"
+        },
+        "IsFreezerRequired": {
+          "description": "Indicates if item requires freezer for transportation. Default value: N.",
+          "type": "string"
+        },
+        "IsHazmat": {
+          "description": "Indicates if item is hazardous material.",
+          "type": "string"
+        },
+        "IsModelItem": {
+          "description": "This flag indicates that the item is an item with variations (formerly known as a model item). An item with variations represents a group of items with similar set of attributes.",
+          "type": "string"
+        },
+        "IsParcelShippingAllowed": {
+          "description": "This flag indicates whether the item can be shipped through parcel service. Default value: Y.",
+          "type": "string"
+        },
+        "IsPickupAllowed": {
+          "description": "This flag indicates whether the delivery method PICK is allowed for item. Default value: N.",
+          "type": "string"
+        },
+        "IsPreConfigured": {
+          "description": "This flag indicates that the configurable item is pre-configured with selected options. If a bundle is pre-configured, the bundle or physical components that represent the selected option will be available in the catalog. For a pre-configured physical kit, only the physical kit will be available as the item in the catalog.",
+          "type": "string"
+        },
+        "IsProcurementAllowed": {
+          "description": "This flag indicates if the item can be procured for zone skipping. Default value: Y.",
+          "type": "string"
+        },
+        "IsReturnService": {
+          "description": "This flag indicates whether this provided or delivery service item is to be associated only to a return document.  Default value: N.",
+          "type": "string"
+        },
+        "IsReturnable": {
+          "description": "This flag indicates whether this product item is returnable. Default value: N.",
+          "type": "string"
+        },
+        "IsShippingAllowed": {
+          "description": "This flag indicates whether the delivery method SHP is allowed for item. Default value: N.",
+          "type": "string"
+        },
+        "IsSoldSeparately": {
+          "description": "Indicates if the item can be sold separately. If N, then the item must be part of a bundle or kit. Valid Values: 'Y' or 'N'.",
+          "type": "string"
+        },
+        "IsStandaloneService": {
+          "description": "This flag indicates whether a PS Item is standalone and does not require associations with product lines for it to be included on an order line.",
+          "type": "string"
+        },
+        "IsSubOnOrderAllowed": {
+          "description": "Indicates if during scheduling an order, substitution is allowed or not. If Y, schedule will automatically attempt to substitute an item with preferred or regular substitute.",
+          "type": "string"
+        },
+        "IsValid": {
+          "description": "This flag indicates whether the item is valid.",
+          "type": "string"
+        },
+        "ItemType": {
+          "description": "The generic type of an item.",
+          "type": "string"
+        },
+        "Keywords": {
+          "description": "A field used to specify keywords to be associated with the item.",
+          "type": "string"
+        },
+        "KitCode": {
+          "description": "This field indicates the kit code for this item.",
+          "type": "string"
+        },
+        "ManufacturerItem": {
+          "description": "The identifier used by a manufacturer to identify an item.",
+          "type": "string"
+        },
+        "ManufacturerItemDesc": {
+          "description": "The description of an item, from a manufacturer's view point.",
+          "type": "string"
+        },
+        "ManufacturerName": {
+          "description": "The manufacturer of the item.",
+          "type": "string"
+        },
+        "MasterCatalogID": {
+          "description": "The master catalog to which an item belongs.",
+          "type": "string"
+        },
+        "MaxOrderQuantity": {
+          "description": "The maximum order quantity.",
+          "type": "string"
+        },
+        "MaxReturnWindow": {
+          "description": "The number of days after which the return will not be accepted. Default value: 0.",
+          "type": "string"
+        },
+        "MinOrderQuantity": {
+          "description": "The minimum order quantity.",
+          "type": "string"
+        },
+        "MinReturnWindow": {
+          "description": "The minimum number of days before which return may be accepted without any override. Default value: 0.",
+          "type": "string"
+        },
+        "MinimumCapacityQuantity": {
+          "description": "This is the minimum capacity quantity which will be assumed when  the inventory quantity of the line to arrive at the capacity quantity when the strategy is to arrive at the capacity quantity by association with product line.",
+          "type": "string"
+        },
+        "ModelItemUnitOfMeasure": {
+          "description": "This field describes the unit of measure of the item with variations.",
+          "type": "string"
+        },
+        "NumSecondarySerials": {
+          "description": "The number of secondary serial numbers applicable for a serialized item.",
+          "type": "string"
+        },
+        "OrderingQuantityStrategy": {
+          "description": "This field determines how the ordered quantity is arrived at for a service line.  Valid values: ENT - Based on the entered value on the order line; PROD - Based on the associated product line.  Default value: ENT.",
+          "type": "string"
+        },
+        "PricingQuantityConvFactor": {
+          "description": "The pricing quantity conversion factor. This conversion factor is multiplied with the inventory quantity of the line to arrive at this pricing quantity.",
+          "type": "string"
+        },
+        "PricingQuantityStrategy": {
+          "description": "This field determines how the pricing quantity is arrived at when different from the inventory quantity.   Valid values: IQTY - Based on the inventory quantity.  Default value: IQTY.",
+          "type": "string"
+        },
+        "PricingUOM": {
+          "description": "The pricing unit of measure, if different from the inventory unit of measure.",
+          "type": "string"
+        },
+        "PricingUOMStrategy": {
+          "description": "This field determines how the pricing unit of measure is defaulted for the item. It could be same as the inventory UOM or could be different.  Valid values: INV - Same as the inventory UOM; ALT - Different from the inventory UOM.  Default value: INV.",
+          "type": "string"
+        },
+        "PrimaryEnterpriseCode": {
+          "description": "The primary enterprise associated with an item.",
+          "type": "string"
+        },
+        "PrimarySupplier": {
+          "description": "The primary supplier. This will have the primary supplier organization code for the item.",
+          "type": "string"
+        },
+        "ProductLine": {
+          "description": "The product line associated with the item.",
+          "type": "string"
+        },
+        "RequiresProdAssociation": {
+          "description": "IThis flag indicates whether the item must be associated to an order line having a group code of PROD. Applicable for service items which must be associated to a Product order line.",
+          "type": "string"
+        },
+        "ReturnWindow": {
+          "description": "The number of days after which return may not be accepted. Default value: 0.",
+          "type": "string"
+        },
+        "RunQuantity": {
+          "description": "The run quantity indicates the multiple of quantity in which a work order gets created. This field is valid only for service items.",
+          "type": "string"
+        },
+        "SerializedFlag": {
+          "description": "This flag indicates whether an item is serialized.",
+          "type": "string"
+        },
+        "ServiceTypeID": {
+          "description": "The service type associated to this service item.",
+          "type": "string"
+        },
+        "ShipmentConsolidationWindow": {
+          "description": "Indicates the number of days an item can be delayed after it becomes available to be consolidated to a single shipment. Used by scheduling when shipment/cost optimization is considered.",
+          "type": "string"
+        },
+        "ShortDescription": {
+          "description": "The short description of the item.",
+          "type": "string"
+        },
+        "SizeCode": {
+          "description": "This field describes the size code of the item.",
+          "type": "string"
+        },
+        "Status": {
+          "description": "This field indicates the status of an item.",
+          "type": "string"
+        },
+        "TaxableFlag": {
+          "description": "This flag indicates whether an item is taxable.",
+          "type": "string"
+        },
+        "UnitCost": {
+          "description": "The cost of one unit of an item.",
+          "type": "string"
+        },
+        "UnitHeight": {
+          "description": "The height of one unit of item quantity.",
+          "type": "string"
+        },
+        "UnitHeightUOM": {
+          "description": "The unit of measure in which item height is measured.",
+          "type": "string"
+        },
+        "UnitLength": {
+          "description": "The length of one unit of item quantity.",
+          "type": "string"
+        },
+        "UnitLengthUOM": {
+          "description": "The unit of measure in which an item length is measured.",
+          "type": "string"
+        },
+        "UnitVolume": {
+          "description": "Calculated volume of one unit of item quantity.",
+          "type": "string"
+        },
+        "UnitVolumeUOM": {
+          "description": "Unit of measure in which the item volume is measured.",
+          "type": "string"
+        },
+        "UnitWeight": {
+          "description": "The weight of one unit of item quantity.",
+          "type": "string"
+        },
+        "UnitWeightUOM": {
+          "description": "The unit of measure in which the item weight is measured.",
+          "type": "string"
+        },
+        "UnitWidth": {
+          "description": "The width of one unit of item quantity.",
+          "type": "string"
+        },
+        "UnitWidthUOM": {
+          "description": "The unit of measure in which an item's width is measured.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.Remove": {
+      "properties": {
+        "ItemExclusion": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ItemExclusion"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.SafetyFactorDefinition": {
+      "properties": {
+        "DeliveryMethod": {
+          "type": "string"
+        },
+        "FutureSafetyFactorPercentage": {
+          "description": "The future safety factor percentage of this item.  The FutureSafetyFactorPercentage will be excluded from the actual future availability of the item if the scheduling rule, node type, and supply type are configured to apply future safety factor.",
+          "type": "string"
+        },
+        "OnhandSafetyFactorPercentage": {
+          "description": "The on-hand safety factor percentage of this item.  The OnhandSafetyFactorPercentage will be excluded from the actual on-hand availability of the item if the scheduling rule, node type, and supply type are configured to apply on-hand safety factor.   OnhandSafetyFactorPercentage will be used only when OnhandSafetyFactorQuantity is not specified.",
+          "type": "string"
+        },
+        "OnhandSafetyFactorQuantity": {
+          "description": "The on-hand safety factor quantity of this item.  The OnhandSafetyFactorQuantity will be excluded from the actual on-hand availability of the item if the scheduling rule, node type, and supply type are configured to apply on-hand safety factor.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.SafetyFactorDefinitions": {
+      "properties": {
+        "Reset": {
+          "type": "string"
+        },
+        "SafetyFactorDefinition": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.SafetyFactorDefinition"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ServiceActivities": {
+      "properties": {
+        "ServiceActivity": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ServiceActivity"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ServiceActivity": {
+      "properties": {
+        "ActivityCode": {
+          "type": "string"
+        },
+        "ActivitySeqNo": {
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "ServiceActivityInstructions": {
+          "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ServiceActivityInstructions"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ServiceActivityInstruction": {
+      "properties": {
+        "InstructionText": {
+          "description": "Free-form text indicating any additional information related to the instruction type or otherwise.",
+          "type": "string"
+        },
+        "InstructionURL": {
+          "description": "The URL relating to and/or containing the instructions.",
+          "type": "string"
+        },
+        "Operation": {
+          "type": "string"
+        },
+        "SequenceNo": {
+          "description": "You could have an instruction exceeding the limits of a single record. Sequence number is used to provide a way to store a link between such instructions.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.ServiceActivityInstructions": {
+      "properties": {
+        "ServiceActivityInstruction": {
+          "items": {
+            "$ref": "#/definitions/com.ibm.sterling.smcfs.item.ServiceActivityInstruction"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.WIPCostFactorPurpose": {
+      "properties": {
+        "CostFactorGroupKey": {
+          "description": "Primary key for the YFS_COST_FACTOR_GROUP table.",
+          "type": "string"
+        },
+        "CostFactorGroupName": {
+          "description": "Name of the Cost Factor Group.",
+          "type": "string"
+        },
+        "PostingClassification": {
+          "description": "Posting Classification of the item for which the cost factor group is defined.",
+          "type": "string"
+        },
+        "SupplierOrganizationCode": {
+          "description": "Organization code of the supplier for which the cost factor group is defined.Link to YFS_Organization.",
+          "type": "string"
+        }
+      }
+    },
+    "com.ibm.sterling.smcfs.item.WMSItemAttributes": {
+      "properties": {
+        "ConstrainedByHeight": {
+          "description": "Indicates whether the item orientation when packed inside the container is constrained by height, for ex: up-right or non-tippable items like paints, oil cans etc.",
+          "type": "string"
+        },
+        "Deformable": {
+          "description": "Indicates whether this item can be folded/stuffed/squeezed.",
+          "type": "string"
+        },
+        "PackByVolume": {
+          "description": "Indicates whether the item dimensions should be tracked after this item is placed inside the container. If true, only the volume and weight are tracked after performing a dimension check against the container to be packed.",
+          "type": "string"
+        },
+        "PackedHeight": {
+          "description": "Height of the item when packed inside a container. The unit of measure for this is same as that of dimension UOM for unit height.",
+          "type": "string"
+        },
+        "PackedLength": {
+          "description": "Length of the item when packed inside a container. The unit of measure for this is same as that of dimension UOM for unit length.",
+          "type": "string"
+        },
+        "PackedWidth": {
+          "description": "Width of the item when packed inside a container. The unit of measure for this is same as that of dimension UOM for unit width.",
+          "type": "string"
+        },
+        "StackHeightIncrease": {
+          "description": "Increase in height of the item when stacked. The unit of measure for this is same as that of dimension UOM for unit height.",
+          "type": "string"
+        },
+        "Stackable": {
+          "description": "This flag indicates whether the item is stackable.",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
